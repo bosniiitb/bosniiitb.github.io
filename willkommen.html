@@ -5,23 +5,35 @@
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;margin:0;padding:0;font-family:'Rajdhani',sans-serif}
-  :root{--bg:#0E0E0E;--gold:#C9A84C;--text:#F2F2F2;--line:#2A2A2A}
+  :root{--bg:#0E0E0E;--gold:#C9A84C;--gold-dim:#9A7F38;--text:#F2F2F2;--line:#2A2A2A;--surface:#171717}
   body{background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{text-decoration:none;color:inherit}
   .nav{height:64px;display:flex;align-items:center;padding:0 clamp(18px,4vw,28px);border-bottom:1px solid var(--line)}
   .logo{font-weight:700;font-size:16px;letter-spacing:1.4px}.logo b{color:var(--gold)}
-  main{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 24px;position:relative;overflow:hidden}
-  .glow{position:absolute;left:50%;top:50%;width:640px;height:640px;transform:translate(-50%,-50%);
+  main{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding:56px 24px;position:relative;overflow:hidden}
+  .glow{position:absolute;left:50%;top:38%;width:660px;height:660px;transform:translate(-50%,-50%);
     background:radial-gradient(circle,rgba(201,168,76,.14),transparent 62%);pointer-events:none}
-  .box{position:relative;z-index:1;max-width:600px}
-  .check{width:76px;height:76px;margin:0 auto 26px}
-  h1{font-weight:700;font-size:clamp(32px,6vw,54px);line-height:1.05}
+  .box{position:relative;z-index:1;max-width:600px;width:100%}
+  .check{width:70px;height:70px;margin:0 auto 24px}
+  h1{font-weight:700;font-size:clamp(32px,6vw,52px);line-height:1.05}
   h1 .g{color:var(--gold)}
-  p{font-weight:500;font-size:clamp(17px,2.4vw,20px);line-height:1.55;opacity:.9;margin-top:22px}
-  .note{margin-top:24px;font-size:16px;opacity:.6}
-  .btn{display:inline-block;margin-top:34px;font-weight:700;font-size:15px;letter-spacing:.4px;
-    padding:14px 30px;border-radius:12px;border:1px solid var(--gold);color:var(--gold);transition:.15s}
-  .btn:hover{background:var(--gold);color:#171308}
+  p{font-weight:500;font-size:clamp(16px,2.4vw,19px);line-height:1.55;opacity:.88;margin-top:20px}
+
+  /* Der Moment, in dem aus einem Abonnenten ein Tester wird */
+  .playbox{margin-top:36px;text-align:left;border:1px solid var(--gold-dim);border-radius:14px;
+    padding:22px 24px;background:linear-gradient(180deg,rgba(201,168,76,.08),transparent)}
+  .pb-k{color:var(--gold);font-weight:700;font-size:17px;margin-bottom:16px}
+  .pb-steps{display:flex;gap:10px;flex-wrap:wrap}
+  .pb-step{flex:1;min-width:210px;display:flex;align-items:center;gap:11px;background:var(--gold);
+    color:#0E0E0E;border-radius:10px;padding:14px 15px;font-weight:700;font-size:15px;transition:.15s}
+  .pb-step:hover{background:#D9B85C}
+  .pb-n{flex:none;width:23px;height:23px;border-radius:50%;background:#0E0E0E;color:var(--gold);
+    display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+  .pb-hint{margin-top:14px;font-size:14px;opacity:.62;font-weight:500}
+
+  .btn{display:inline-block;margin-top:30px;font-weight:700;font-size:15px;
+    padding:13px 28px;border-radius:12px;border:1px solid var(--line);color:var(--text);opacity:.75;transition:.15s}
+  .btn:hover{border-color:var(--gold);color:var(--gold);opacity:1}
   .lang{position:absolute;top:20px;right:clamp(18px,4vw,28px);display:flex;gap:2px;z-index:2}
   .lang button{font-family:inherit;background:none;border:none;cursor:pointer;color:var(--text);
     font-weight:700;font-size:12.5px;padding:6px 7px;opacity:.5}
@@ -33,27 +45,45 @@
     <svg class="check" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none" stroke="#C9A84C" stroke-width="2.5"/><path fill="none" stroke="#C9A84C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" d="M15 27l7 7 15-16"/></svg>
     <h1 id="wh"></h1>
     <p id="wp"></p>
-    <p class="note" id="wn"></p>
+
+    <div class="playbox">
+      <div class="pb-k" id="pk"></div>
+      <div class="pb-steps">
+        <a class="pb-step" target="_blank" rel="noopener"
+           href="https://groups.google.com/g/trainers-boardroom-testers"><span class="pb-n">1</span><span id="p1"></span></a>
+        <a class="pb-step" target="_blank" rel="noopener"
+           href="https://play.google.com/apps/testing/com.bosniii.trainersboardroom"><span class="pb-n">2</span><span id="p2"></span></a>
+      </div>
+      <p class="pb-hint" id="ph"></p>
+    </div>
+
     <a href="/" class="btn" id="wb"></a>
   </div></main>
 <script>
 var T={
  de:{h:'Du bist dabei.<br><span class="g">Willkommen im Boardroom.</span>',
-     p:'Deinen Einladungslink schicke ich dir so schnell wie m\u00f6glich per E-Mail.',
-     n:'Schau bitte auch im Spam-Ordner nach.',
+     p:'Ich melde mich, wenn es Neues gibt. Das fertige Spiel kommt im Dezember 2026.',
+     k:'Die Alpha ist da. Spiel sie.',
+     p1:'Der Testgruppe beitreten', p2:'Tester werden und laden',
+     ph:'Mit dem Google-Konto, mit dem du im Play Store bist.',
      b:'Zur Startseite'},
  en:{h:'You\u2019re in.<br><span class="g">Welcome to the Boardroom.</span>',
-     p:'I\u2019ll email you your invite link as soon as I can.',
-     n:'Please check your spam folder too.',
+     p:'I\u2019ll be in touch when there\u2019s news. The full game lands December 2026.',
+     k:'The alpha is out. Go play it.',
+     p1:'Join the tester group', p2:'Opt in and install',
+     ph:'Use the Google account you\u2019re signed in with at the Play Store.',
      b:'Back to homepage'},
  hr:{h:'Prijavljen si.<br><span class="g">Dobrodo\u0161ao u Boardroom.</span>',
-     p:'Link ti \u0161aljem na e-mail \u010dim prije.',
-     n:'Provjeri i mapu ne\u017eeljene po\u0161te.',
+     p:'Javim ti se kad bude novosti. Gotova igra sti\u017ee u prosincu 2026.',
+     k:'Alfa je tu. Isprobaj je.',
+     p1:'Pridru\u017ei se testnoj grupi', p2:'Prijavi se i preuzmi',
+     ph:'Koristi Google ra\u010dun s kojim si u trgovini Play.',
      b:'Na naslovnicu'}};
 var L='de',nl=(navigator.language||'de').toLowerCase();
 if(nl.indexOf('hr')===0)L='hr'; else if(nl.indexOf('en')===0)L='en';
 function ap(l){L=l;document.documentElement.lang=l;
-  wh.innerHTML=T[l].h; wp.innerHTML=T[l].p; wn.innerHTML=T[l].n; wb.textContent=T[l].b;
+  wh.innerHTML=T[l].h; wp.innerHTML=T[l].p; pk.textContent=T[l].k;
+  p1.textContent=T[l].p1; p2.textContent=T[l].p2; ph.textContent=T[l].ph; wb.textContent=T[l].b;
   document.querySelectorAll('.lang button').forEach(function(b){b.className=b.getAttribute('data-l')===l?'on':'';});}
 document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){ap(b.getAttribute('data-l'));});});
 ap(L);
