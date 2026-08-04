@@ -50,9 +50,7 @@
       <div class="pb-k" id="pk"></div>
       <div class="pb-steps">
         <a class="pb-step" target="_blank" rel="noopener"
-           href="https://groups.google.com/g/trainers-boardroom-testers"><span class="pb-n">1</span><span id="p1"></span></a>
-        <a class="pb-step" target="_blank" rel="noopener"
-           href="https://play.google.com/apps/testing/com.bosniii.trainersboardroom"><span class="pb-n">2</span><span id="p2"></span></a>
+           href="https://play.google.com/store/apps/details?id=com.bosniii.trainersboardroom"><span id="p1"></span></a>
       </div>
       <p class="pb-hint" id="ph"></p>
     </div>
@@ -63,27 +61,27 @@
 var T={
  de:{h:'Du bist dabei.<br><span class="g">Willkommen im Boardroom.</span>',
      p:'Ich melde mich, wenn es Neues gibt. Das fertige Spiel kommt im Dezember 2026.',
-     k:'Die Alpha ist da. Spiel sie.',
-     p1:'Der Testgruppe beitreten', p2:'Tester werden und laden',
-     ph:'Mit dem Google-Konto, mit dem du im Play Store bist.',
+     k:'Das Spiel ist im Play Store. Spiel es.',
+     p1:'Im Play Store laden',
+     ph:'Early Access — kostenlos, ohne Werbung, ganz offline.',
      b:'Zur Startseite'},
  en:{h:'You\u2019re in.<br><span class="g">Welcome to the Boardroom.</span>',
      p:'I\u2019ll be in touch when there\u2019s news. The full game lands December 2026.',
-     k:'The alpha is out. Go play it.',
-     p1:'Join the tester group', p2:'Opt in and install',
-     ph:'Use the Google account you\u2019re signed in with at the Play Store.',
+     k:'The game is on the Play Store. Go play it.',
+     p1:'Get it on Google Play',
+     ph:'Early access \u2014 free, no ads, fully offline.',
      b:'Back to homepage'},
  hr:{h:'Prijavljen si.<br><span class="g">Dobrodo\u0161ao u Boardroom.</span>',
      p:'Javim ti se kad bude novosti. Gotova igra sti\u017ee u prosincu 2026.',
-     k:'Alfa je tu. Isprobaj je.',
-     p1:'Pridru\u017ei se testnoj grupi', p2:'Prijavi se i preuzmi',
-     ph:'Koristi Google ra\u010dun s kojim si u trgovini Play.',
+     k:'Igra je na Play Storeu. Zaigraj je.',
+     p1:'Preuzmi na Google Playu',
+     ph:'Rani pristup \u2014 besplatno, bez reklama, potpuno offline.',
      b:'Na naslovnicu'}};
 var L='de',nl=(navigator.language||'de').toLowerCase();
 if(nl.indexOf('hr')===0)L='hr'; else if(nl.indexOf('en')===0)L='en';
 function ap(l){L=l;document.documentElement.lang=l;
   wh.innerHTML=T[l].h; wp.innerHTML=T[l].p; pk.textContent=T[l].k;
-  p1.textContent=T[l].p1; p2.textContent=T[l].p2; ph.textContent=T[l].ph; wb.textContent=T[l].b;
+  p1.textContent=T[l].p1; ph.textContent=T[l].ph; wb.textContent=T[l].b;
   document.querySelectorAll('.lang button').forEach(function(b){b.className=b.getAttribute('data-l')===l?'on':'';});}
 document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){ap(b.getAttribute('data-l'));});});
 ap(L);
