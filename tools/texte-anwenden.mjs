@@ -3,7 +3,9 @@
 // Danach: node tools/build-lang.mjs <JJJJ-MM-TT>
 import fs from 'fs';
 import path from 'path';
-import NEU from './texte-2026-09-20.mjs';
+// Welche Textliste angewandt wird: --texte=./texte-JJJJ-MM-TT.mjs (ohne Angabe die vom 20.09.2026)
+const MODUL = (process.argv.find(x => x.startsWith('--texte=')) || '--texte=./texte-2026-09-20.mjs').split('=')[1];
+const NEU = (await import(MODUL)).default;
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '..');
 const SRC = path.join(ROOT, 'index.html');
