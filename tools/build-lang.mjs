@@ -15,17 +15,17 @@ const PATHS = { de: '/', en: '/en/', hr: '/hr/' };
 const META = {
   de: {
     title: "Trainer's Boardroom – Fußballmanager für Android, offline",
-    desc: "Der Fußballmanager fürs Handy, mit einer Hand spielbar: 100 Ligen, 51 Länder, 1.459 Vereine, echtes Live-Spiel. Kostenlos, komplett offline, ohne Werbung, kein Pay-to-win. Version 1.1.3 im Play Store.",
+    desc: "Der Fußballmanager fürs Handy, in dem alle 1.459 Vereine wirklich wirtschaften: 100 Ligen, 51 Länder, echtes Live-Spiel. Kostenlos, komplett offline, ohne Werbung, kein Pay-to-win. Version 1.1.3 im Play Store.",
     locale: 'de_DE',
   },
   en: {
     title: "Trainer's Boardroom – Offline Football Manager for Android",
-    desc: "A one-handed football manager for Android: 100 leagues, 51 countries, 1,459 clubs, live matches you can step into. Free, fully offline, no ads, no pay-to-win. Version 1.1.3 on Google Play.",
+    desc: "The football manager for Android where all 1,459 clubs run their own books: 100 leagues, 51 countries, live matches you can step into. Free, fully offline, no ads, no pay-to-win. Version 1.1.3 on Google Play.",
     locale: 'en_GB',
   },
   hr: {
     title: "Trainer's Boardroom – nogometni menadžer za Android, offline",
-    desc: "Nogometni menadžer za mobitel, igra se jednom rukom: 100 liga, 51 država, 1.459 klubova, utakmica uživo. Besplatno, potpuno offline, bez reklama, bez pay-to-wina. Verzija 1.1.3 na Google Playu.",
+    desc: "Nogometni menadžer za mobitel u kojem svih 1.459 klubova stvarno posluje: 100 liga, 51 država, utakmica uživo. Besplatno, potpuno offline, bez reklama, bez pay-to-wina. Verzija 1.1.3 na Google Playu.",
     locale: 'hr_HR',
   },
 };
