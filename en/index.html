@@ -123,22 +123,7 @@
   @media(max-width:840px){ .feat{grid-template-columns:1fr;text-align:center;gap:22px;} .feat:nth-child(even) .feat-img{order:0;} .feat-img{max-width:224px;} .feat-img.two{max-width:360px;} .lb-in{flex-direction:column;gap:20px;} .lb-in img{max-height:56vh;} .lb-txt{text-align:center;max-width:90vw;} .lb-txt .dots{justify-content:center;} }
   @media(max-width:760px){.depth{grid-template-columns:1fr;gap:16px;}}
   @media(max-width:480px){ .cta-row .btn{flex:1;} .form input[type=email],.form .btn{width:100%;flex:none;} .lb .ar{font-size:32px;padding:6px;} .lb-txt h3{font-size:24px;} .lang button{padding:6px 5px;} .duo{gap:10px;} .duo .phone+.phone{margin-top:18px;} .stats{grid-template-columns:repeat(2,1fr);gap:12px;} }
-
-  #waitlist .sib-form{background:transparent!important;padding:0!important;text-align:center!important;}
-  #waitlist #sib-form-container,#waitlist #sib-container{background:transparent!important;border:none!important;max-width:450px!important;margin:0 auto!important;padding:0!important;}
-  #waitlist #sib-form{padding:0!important;}
   #waitlist .entry__label,#waitlist .entry__specification{display:none!important;}
-  #waitlist input#EMAIL{background:var(--bg)!important;border:1px solid var(--gold-dim)!important;border-radius:12px!important;padding:14px 17px!important;color:var(--text)!important;font-family:'Rajdhani',sans-serif!important;font-size:16px!important;width:100%!important;height:auto!important;box-shadow:none!important;text-align:left!important;}
-  #waitlist input#EMAIL::placeholder{color:#8390A4!important;}
-  #waitlist .sib-form-block{padding:8px 0!important;text-align:center!important;}
-  #waitlist .sib-form-block__button{background:var(--gold)!important;color:#171308!important;font-family:'Rajdhani',sans-serif!important;font-weight:700!important;font-size:15px!important;letter-spacing:.4px!important;border-radius:12px!important;border:none!important;padding:14px 28px!important;width:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;cursor:pointer!important;}
-  #waitlist .sib-form-block__button svg{fill:#171308!important;}
-  #waitlist #sib-form{display:flex!important;flex-direction:column!important;gap:2px!important;align-items:stretch!important;}
-  #waitlist #sib-form > div{padding:6px 0!important;margin:0!important;width:100%!important;}
-  #waitlist .form__entry,#waitlist .entry__field,#waitlist .sib-input,#waitlist .form__label-row{width:100%!important;margin:0!important;}
-  #waitlist .sib-form-block__button svg{display:none!important;}
-  #waitlist .sib-form-block__button{min-height:0!important;line-height:1.2!important;}
-  #waitlist .sib-form-message-panel{display:none;font-family:'Rajdhani',sans-serif!important;border-radius:12px!important;max-width:450px!important;margin:0 auto 12px!important;font-size:15px!important;padding:12px 16px!important;border:none!important;}
   #waitlist #success-message{color:var(--ok)!important;background:rgba(59,181,106,.12)!important;}
   #waitlist #error-message{color:var(--red)!important;background:rgba(224,85,85,.12)!important;}
   #waitlist .entry__error{font-family:'Rajdhani',sans-serif!important;border-radius:10px!important;margin-top:6px!important;}
@@ -149,10 +134,6 @@
   .dl-post h3{font-weight:700;font-size:20px;line-height:1.2;margin:6px 0 10px;}
   .dl-post p{font-weight:500;font-size:15.5px;line-height:1.62;opacity:.9;white-space:pre-line;}
   .dl-empty{text-align:center;opacity:.55;font-weight:500;padding:20px;}
-  #waitlist input#EMAIL{transition:border-color .15s,box-shadow .15s;}
-  #waitlist input#EMAIL:focus{outline:none;border-color:var(--gold)!important;box-shadow:0 0 0 3px rgba(201,168,76,.15)!important;}
-  #waitlist .sib-form-block__button{transition:transform .12s,filter .12s;}
-  #waitlist .sib-form-block__button:hover{transform:translateY(-1px);filter:brightness(1.05);}
 
   .wl-form{display:flex;flex-direction:column;gap:12px;max-width:450px;margin:0 auto;}
   .wl-form input[type=email]{background:var(--bg);border:1px solid var(--gold-dim);border-radius:12px;padding:15px 18px;color:var(--text);font-size:16px;font-family:'Rajdhani',sans-serif;width:100%;transition:border-color .15s,box-shadow .15s;}
@@ -422,7 +403,7 @@
       <a href="https://www.reddit.com/user/LozaniteStudio/" target="_blank" rel="noopener" title="Reddit" aria-label="Reddit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5.01 11.05c.02.16.04.32.04.49 0 2.5-2.92 4.53-6.51 4.53s-6.51-2.03-6.51-4.53c0-.17.01-.33.04-.49-.54-.24-.91-.78-.91-1.4 0-.85.69-1.53 1.53-1.53.41 0 .79.16 1.06.43 1.04-.75 2.46-1.23 4.05-1.29l.76-3.56 2.48.53c.09-.5.53-.88 1.06-.88.6 0 1.08.49 1.08 1.08 0 .6-.48 1.08-1.08 1.08-.42 0-.79-.24-.96-.6l-2.2-.47-.66 3.13c1.57.07 2.98.55 4.01 1.29.27-.27.65-.43 1.06-.43.85 0 1.53.68 1.53 1.53 0 .62-.37 1.16-.91 1.4zM8.54 12.9c0 .6.48 1.08 1.08 1.08.6 0 1.08-.48 1.08-1.08 0-.6-.48-1.08-1.08-1.08-.6 0-1.08.49-1.08 1.08zm5.43 2.74c-.5.5-1.54.68-2.44.68-.9 0-1.94-.18-2.44-.68-.12-.12-.31-.12-.42 0-.12.12-.12.31 0 .42.63.63 1.84.79 2.86.79 1.02 0 2.23-.16 2.86-.79.12-.12.12-.31 0-.42-.11-.12-.3-.12-.42 0zm-.51-1.66c.6 0 1.08-.48 1.08-1.08 0-.6-.48-1.08-1.08-1.08-.6 0-1.08.49-1.08 1.08 0 .6.48 1.08 1.08 1.08z"/></svg></a>
     </div>
   </div></div></section>
-  <div class="gpfooter"><a id="gpBadge" class="gpbadge" href="https://play.google.com/store/apps/details?id=com.bosniii.trainersboardroom&referrer=utm_source%3Dwebsite%26utm_medium%3Dweb" target="_blank" rel="noopener"><img id="gpBadgeImg" alt="Jetzt bei Google Play" height="60" width="202" src="https://play.google.com/intl/en_us/badges/static/images/badges/de_badge_web_generic.png" onerror="this.onerror=null;this.src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'"></a><p class="gp-legal">Google Play and the Google Play logo are trademarks of Google LLC.</p></div><footer><div data-i18n="foot">© 2026 Trainer's Boardroom · Lozanite Studio</div><div class="fl"><a href="/presse.html" data-i18n="l_press">Press</a><a href="/impressum.html" data-i18n="l_imp">Legal Notice</a>·<a href="/datenschutz.html" data-i18n="l_dat">Privacy</a></div></footer>
+  <div class="gpfooter"><a id="gpBadge" class="gpbadge" href="https://play.google.com/store/apps/details?id=com.bosniii.trainersboardroom&referrer=utm_source%3Dwebsite%26utm_medium%3Dweb" target="_blank" rel="noopener"><img id="gpBadgeImg" alt="Jetzt bei Google Play" height="60" width="202" src="/img/badges/de_badge_web_generic.png" onerror="this.onerror=null;this.src='/img/badges/en_badge_web_generic.png'"></a><p class="gp-legal">Google Play and the Google Play logo are trademarks of Google LLC.</p></div><footer><div data-i18n="foot">© 2026 Trainer's Boardroom · Lozanite Studio</div><div class="fl"><a href="/presse.html" data-i18n="l_press">Press</a><a href="/impressum.html" data-i18n="l_imp">Legal Notice</a>·<a href="/datenschutz.html" data-i18n="l_dat">Privacy</a></div></footer>
   <div class="lb" id="lb"><span class="x" id="lbx">&times;</span><span class="ar l" id="lbp">&#8249;</span><span class="ar r" id="lbn">&#8250;</span>
     <div class="lb-in"><img id="lbimg" src="" alt="Screen"><div class="lb-txt"><div class="n" id="lbn2"></div><h3 id="lbh"></h3><p id="lbd"></p><div class="dots" id="lbdots"></div></div></div></div>
   <a href="#hero" class="sticky-cta" id="stickyCta" data-i18n="sticky_cta">Play</a>
@@ -459,7 +440,7 @@ var __x=0;
   function renderChips(T){var el=document.getElementById('ehChips');if(!el||!T.eh_chips)return;el.innerHTML='';T.eh_chips.forEach(function(c){var s=document.createElement('span');s.textContent=c;el.appendChild(s);});}
   function renderDevlog(){var el=document.getElementById('devlogList');if(!el)return;if(!POSTS.length){el.innerHTML='';var e=document.createElement('div');e.className='dl-empty';e.textContent=I18N[LANG].dl_empty;el.appendChild(e);return;}el.innerHTML='';POSTS.forEach(function(p){var t=(p.title&&(p.title[LANG]||p.title.de))||'';var b=(p.body&&(p.body[LANG]||p.body.de))||'';var d=document.createElement('div');d.className='dl-post';var dd=document.createElement('div');dd.className='dl-date';dd.textContent=p.date||'';var hh=document.createElement('h3');hh.textContent=t;var pp=document.createElement('p');pp.textContent=b;d.appendChild(dd);d.appendChild(hh);d.appendChild(pp);el.appendChild(d);});}
   function applyLang(l){
-    LANG=l; var T=I18N[l]; document.documentElement.lang=l; document.title=T.title;var gb=document.getElementById('gpBadgeImg');if(gb){gb.src='https://play.google.com/intl/en_us/badges/static/images/badges/'+({de:'de',en:'en',hr:'hr'}[l]||'en')+'_badge_web_generic.png';gb.alt=T.gp_alt||gb.alt;}
+    LANG=l; var T=I18N[l]; document.documentElement.lang=l; document.title=T.title;var gb=document.getElementById('gpBadgeImg');if(gb){gb.src='/img/badges/'+({de:'de',en:'en',hr:'hr'}[l]||'en')+'_badge_web_generic.png';gb.alt=T.gp_alt||gb.alt;}
     document.querySelectorAll('[data-i18n]').forEach(function(el){var k=el.getAttribute('data-i18n');
       if(k.indexOf('feat')===0){var p=k.slice(4).split('_');el.innerHTML=T.feats[+p[0]][+p[1]];}
       else if(T[k]!==undefined){el.innerHTML=T[k];}});
