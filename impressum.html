@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="noindex,follow">
 <title>Impressum — Trainer's Boardroom</title>
 <link href="/fonts/rajdhani.css" rel="stylesheet">
 <style>
@@ -34,7 +34,7 @@
   .langrow{display:block;margin-top:10px;opacity:.75}
   .langrow a{margin:0 6px}
   .langrow b{margin:0 6px}
-</style></head><body>
+.kform{display:flex;flex-direction:column;gap:10px;margin:14px 0 6px;max-width:520px}.kform textarea,.kform input{font:inherit;color:var(--text);background:#161616;border:1px solid var(--line);border-radius:10px;padding:10px 12px}.kform textarea:focus,.kform input:focus{outline:2px solid var(--gold);outline-offset:1px}.kform button{font:inherit;font-weight:600;color:#0E0E0E;background:var(--gold);border:0;border-radius:999px;padding:10px 18px;align-self:flex-start;cursor:pointer}.kform button:disabled{opacity:.6}.kmsg{min-height:1.2em;font-size:.95em}.kmsg.err{color:#E07A6A}.kok{color:var(--gold)}</style></head><body>
 <nav class="nav">
   <a href="/" class="logo">TRAINER'S <b>BOARDROOM</b></a>
   <a href="/" class="back">← Zur Startseite</a>
@@ -42,7 +42,7 @@
 <main>
   <h1>Impres<span>sum</span></h1>
   <p class="upd">Angaben gemäß § 5 DDG</p>
-<p>Fabian Bošnjak<br>Lozanite Studio<br>Von-Einem-Straße 82<br>45130 Essen</p><p><b>Kontakt</b><br>Telefon: +49 1575 6785606<br>E-Mail: trainersboardroom@outlook.com</p><p class="lnote">Quelle: <a href="https://www.e-recht24.de" target="_blank" rel="noopener" style="color:var(--gold)">eRecht24</a></p>
+<p>Fabian Bošnjak<br>Lozanite Studio<br>Von-Einem-Straße 82<br>45130 Essen</p><p><b>Kontakt</b><br>E-Mail: trainersboardroom@outlook.com<br>oder über dieses Formular:</p><form id="kform" class="kform" novalidate><label for="ktext">Deine Nachricht</label><textarea id="ktext" rows="5" maxlength="2000"></textarea><label for="kmail">Deine E-Mail für die Antwort</label><input id="kmail" type="email" autocomplete="email"><button type="submit">Nachricht senden</button></form><p class="kmsg" id="kmsg" aria-live="polite"></p><p class="kok" id="kok" hidden>Danke, deine Nachricht ist angekommen.</p><script>(function(){var f=document.getElementById('kform');if(!f)return;var m=document.getElementById('kmsg'),ok=document.getElementById('kok'),t=document.getElementById('ktext'),e=document.getElementById('kmail'),b=f.querySelector('button');f.addEventListener('submit',function(ev){ev.preventDefault();var tx=(t.value||'').trim(),ma=(e.value||'').trim();m.className='kmsg';m.textContent='';if(tx.length<3||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ma)){m.textContent="Bitte schreib eine Nachricht und gib deine E-Mail-Adresse an.";m.className='kmsg err';return;}b.disabled=true;fetch('https://tb-signup.trainersboardroom.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({suggestion:"[Kontakt Impressum DE] "+tx,contact:ma})}).then(function(r){return r.json().catch(function(){return{ok:r.ok};});}).then(function(res){b.disabled=false;if(res&&res.ok){f.hidden=true;ok.hidden=false;}else{m.textContent="Das hat nicht geklappt. Schreib mir bitte an trainersboardroom@outlook.com.";m.className='kmsg err';}}).catch(function(){b.disabled=false;m.textContent="Das hat nicht geklappt. Schreib mir bitte an trainersboardroom@outlook.com.";m.className='kmsg err';});});})();</script><p class="lnote">Quelle: <a href="https://www.e-recht24.de" target="_blank" rel="noopener" style="color:var(--gold)">eRecht24</a></p>
 </main>
 <footer>
   <a href="/impressum.html">Impressum</a> ·

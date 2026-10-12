@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="noindex,follow">
 <title>Legal notice — Trainer’s Boardroom</title>
 <link href="/fonts/rajdhani.css" rel="stylesheet">
 <style>
@@ -34,7 +34,7 @@
   .langrow{display:block;margin-top:10px;opacity:.75}
   .langrow a{margin:0 6px}
   .langrow b{margin:0 6px}
-</style></head><body>
+.kform{display:flex;flex-direction:column;gap:10px;margin:14px 0 6px;max-width:520px}.kform textarea,.kform input{font:inherit;color:var(--text);background:#161616;border:1px solid var(--line);border-radius:10px;padding:10px 12px}.kform textarea:focus,.kform input:focus{outline:2px solid var(--gold);outline-offset:1px}.kform button{font:inherit;font-weight:600;color:#0E0E0E;background:var(--gold);border:0;border-radius:999px;padding:10px 18px;align-self:flex-start;cursor:pointer}.kform button:disabled{opacity:.6}.kmsg{min-height:1.2em;font-size:.95em}.kmsg.err{color:#E07A6A}.kok{color:var(--gold)}</style></head><body>
 <nav class="nav">
   <a href="/en/" class="logo">TRAINER’S <b>BOARDROOM</b></a>
   <a href="/en/" class="back">← Back to home</a>
@@ -42,7 +42,7 @@
 <main>
   <h1>Legal <span>notice</span></h1>
   <p class="upd">Information according to § 5 DDG (German Digital Services Act)</p>
-<p>Fabian Bošnjak<br>Lozanite Studio<br>Von-Einem-Straße 82<br>45130 Essen<br>Germany</p><p><b>Contact</b><br>Phone: +49 1575 6785606<br>E-mail: trainersboardroom@outlook.com</p>
+<p>Fabian Bošnjak<br>Lozanite Studio<br>Von-Einem-Straße 82<br>45130 Essen<br>Germany</p><p><b>Contact</b><br>E-mail: trainersboardroom@outlook.com<br>or use this form:</p><form id="kform" class="kform" novalidate><label for="ktext">Your message</label><textarea id="ktext" rows="5" maxlength="2000"></textarea><label for="kmail">Your e-mail for the reply</label><input id="kmail" type="email" autocomplete="email"><button type="submit">Send message</button></form><p class="kmsg" id="kmsg" aria-live="polite"></p><p class="kok" id="kok" hidden>Thanks, your message has arrived.</p><script>(function(){var f=document.getElementById('kform');if(!f)return;var m=document.getElementById('kmsg'),ok=document.getElementById('kok'),t=document.getElementById('ktext'),e=document.getElementById('kmail'),b=f.querySelector('button');f.addEventListener('submit',function(ev){ev.preventDefault();var tx=(t.value||'').trim(),ma=(e.value||'').trim();m.className='kmsg';m.textContent='';if(tx.length<3||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ma)){m.textContent="Please write a message and add your e-mail address.";m.className='kmsg err';return;}b.disabled=true;fetch('https://tb-signup.trainersboardroom.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({suggestion:"[Contact legal notice EN] "+tx,contact:ma})}).then(function(r){return r.json().catch(function(){return{ok:r.ok};});}).then(function(res){b.disabled=false;if(res&&res.ok){f.hidden=true;ok.hidden=false;}else{m.textContent="That didn’t work. Please write to trainersboardroom@outlook.com.";m.className='kmsg err';}}).catch(function(){b.disabled=false;m.textContent="That didn’t work. Please write to trainersboardroom@outlook.com.";m.className='kmsg err';});});})();</script>
 <hr>
 <p><b>The German version is the legally binding one.</b> This English version is provided for your convenience. In case of any difference, the <a href="/impressum.html">German legal notice</a> applies.</p>
 </main>

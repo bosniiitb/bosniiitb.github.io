@@ -181,7 +181,7 @@ for (const lang of ['de', 'en', 'hr']) {
 // ── Sitemap ──
 const smPath = path.join(ROOT, 'sitemap.xml');
 const today = process.argv[2] || stop('Datum fehlt: node tools/build-lang.mjs JJJJ-MM-TT (Regel 24)');
-const urls = [['/', '1.0'], ['/en/', '1.0'], ['/hr/', '1.0'], ['/presse.html', '0.5'], ['/impressum.html', '0.2'], ['/datenschutz.html', '0.2']];
+const urls = [['/', '1.0'], ['/en/', '1.0'], ['/hr/', '1.0'], ['/presse.html', '0.5']];  // Impressum/Datenschutz bewusst nicht: noindex seit 12.10.2026 (privatsphaere-2026-10-12.mjs)
 const sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
   + urls.map(([u, p]) => '  <url><loc>' + SITE + u + '</loc><lastmod>' + today + '</lastmod><priority>' + p + '</priority>'
     + (['/', '/en/', '/hr/'].includes(u) ? ['de', 'en', 'hr'].map(l => '<xhtml:link rel="alternate" hreflang="' + l + '" href="' + SITE + PATHS[l] + '"/>').join('') + '<xhtml:link rel="alternate" hreflang="x-default" href="' + SITE + '/"/>' : '')

@@ -12,6 +12,9 @@
  * (azop.hr): ispitanik, voditelj obrade, izvrsitelj obrade, privola, nadzorno tijelo,
  * Opca uredba o zastiti podataka. Nicht uebersetzt, nachgeschlagen.
  *
+ * ⚠⚠ NICHT BLIND LAUFEN LASSEN (12.10.2026): en/privacy.html, hr/privatnost.html, en/legal-notice.html und hr/pravne-informacije.html
+ *    wurden am 11.10. (datenschutz-2026-10-11.mjs: Play Games) und 12.10. (privatsphaere-2026-10-12.mjs: noindex, Anschrift nur im Impressum,
+ *    Kontaktformular statt Telefon) DIREKT geändert. Dieser Erzeuger kennt das nicht und würde es überschreiben. Erst nachziehen.
  * Aufruf:  node tools/rechtstexte.mjs
  */
 import fs from 'fs';

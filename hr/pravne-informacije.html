@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="hr"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="noindex,follow">
 <title>Pravne informacije — Trainer’s Boardroom</title>
 <link href="/fonts/rajdhani.css" rel="stylesheet">
 <style>
@@ -34,7 +34,7 @@
   .langrow{display:block;margin-top:10px;opacity:.75}
   .langrow a{margin:0 6px}
   .langrow b{margin:0 6px}
-</style></head><body>
+.kform{display:flex;flex-direction:column;gap:10px;margin:14px 0 6px;max-width:520px}.kform textarea,.kform input{font:inherit;color:var(--text);background:#161616;border:1px solid var(--line);border-radius:10px;padding:10px 12px}.kform textarea:focus,.kform input:focus{outline:2px solid var(--gold);outline-offset:1px}.kform button{font:inherit;font-weight:600;color:#0E0E0E;background:var(--gold);border:0;border-radius:999px;padding:10px 18px;align-self:flex-start;cursor:pointer}.kform button:disabled{opacity:.6}.kmsg{min-height:1.2em;font-size:.95em}.kmsg.err{color:#E07A6A}.kok{color:var(--gold)}</style></head><body>
 <nav class="nav">
   <a href="/hr/" class="logo">TRAINER’S <b>BOARDROOM</b></a>
   <a href="/hr/" class="back">← Natrag na početnu</a>
@@ -42,7 +42,7 @@
 <main>
   <h1>Pravne <span>informacije</span></h1>
   <p class="upd">Podaci prema čl. 5. njemačkog Zakona o digitalnim uslugama (DDG)</p>
-<p>Fabian Bošnjak<br>Lozanite Studio<br>Von-Einem-Straße 82<br>45130 Essen<br>Njemačka</p><p><b>Kontakt</b><br>Telefon: +49 1575 6785606<br>E-pošta: trainersboardroom@outlook.com</p>
+<p>Fabian Bošnjak<br>Lozanite Studio<br>Von-Einem-Straße 82<br>45130 Essen<br>Njemačka</p><p><b>Kontakt</b><br>E-pošta: trainersboardroom@outlook.com<br>ili putem ovog obrasca:</p><form id="kform" class="kform" novalidate><label for="ktext">Tvoja poruka</label><textarea id="ktext" rows="5" maxlength="2000"></textarea><label for="kmail">Tvoja e-pošta za odgovor</label><input id="kmail" type="email" autocomplete="email"><button type="submit">Pošalji poruku</button></form><p class="kmsg" id="kmsg" aria-live="polite"></p><p class="kok" id="kok" hidden>Hvala, poruka je stigla.</p><script>(function(){var f=document.getElementById('kform');if(!f)return;var m=document.getElementById('kmsg'),ok=document.getElementById('kok'),t=document.getElementById('ktext'),e=document.getElementById('kmail'),b=f.querySelector('button');f.addEventListener('submit',function(ev){ev.preventDefault();var tx=(t.value||'').trim(),ma=(e.value||'').trim();m.className='kmsg';m.textContent='';if(tx.length<3||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ma)){m.textContent="Upiši poruku i svoju adresu e-pošte.";m.className='kmsg err';return;}b.disabled=true;fetch('https://tb-signup.trainersboardroom.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({suggestion:"[Kontakt pravne informacije HR] "+tx,contact:ma})}).then(function(r){return r.json().catch(function(){return{ok:r.ok};});}).then(function(res){b.disabled=false;if(res&&res.ok){f.hidden=true;ok.hidden=false;}else{m.textContent="Nešto nije u redu. Piši mi na trainersboardroom@outlook.com.";m.className='kmsg err';}}).catch(function(){b.disabled=false;m.textContent="Nešto nije u redu. Piši mi na trainersboardroom@outlook.com.";m.className='kmsg err';});});})();</script>
 <hr>
 <p><b>Njemačka je verzija pravno obvezujuća.</b> Ova hrvatska verzija služi radi lakšeg razumijevanja. U slučaju razlike vrijede <a href="/impressum.html">njemačke pravne informacije</a>.</p>
 </main>
