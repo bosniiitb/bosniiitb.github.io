@@ -111,7 +111,7 @@ const VOID = /^(input|img|br|hr|meta|link)$/;
 function renderTexts(html, lang) {
   const T = R.I18N[lang];
   const live = R.STORE_STATUS === 'live';
-  const LIVE_OV = { status: 'status_live', status2: 'status2_live', a1: 'a1_live', q2: 'q2_live', a2: 'a2_live', play_now: 'play_now_live' };
+  const LIVE_OV = { a1: 'a1_live', q2: 'q2_live', a2: 'a2_live', play_now: 'play_now_live' };
   const tagRe = /<([a-z0-9]+)([^>]*?)\sdata-i18n="([a-z0-9_]+)"([^>]*)>/g;
   let out = '', last = 0, m, n = 0, miss = [];
   while ((m = tagRe.exec(html))) {
@@ -161,10 +161,13 @@ function patchScript(html, lang) {
   else if (!html.includes(newClick)) stop('Umschalter-Zeile nicht gefunden');
   // d) relative Verweise in Unterordnern
   if (lang !== 'de') html = html.replace(/src="preview\.mp4"/g, 'src="/preview.mp4"');
+  // e) Entwickler-Tagebuch je Sprache (/devlog/ · /en/devlog/ · /hr/devlog/, tools/devlog/bauen.mjs) — Menue, Hinweis, Fuss (13.10.2026)
+  if (lang !== 'de') html = html.replace(/href="\/devlog\//g, 'href="' + PATHS[lang] + 'devlog/');
   return html;
 }
 
-// ── Bauen ──
+// ── Bauen ── (Datum zuerst: frueher stand die Pruefung erst vor der Sitemap, die Seiten waren dann schon geschrieben — 13.10.2026)
+const today = process.argv[2] || stop('Datum fehlt: node tools/build-lang.mjs JJJJ-MM-TT (Regel 24)');
 const report = [];
 for (const lang of ['de', 'en', 'hr']) {
   let html = buildHead(src, lang);
@@ -180,12 +183,14 @@ for (const lang of ['de', 'en', 'hr']) {
 
 // ── Sitemap ──
 const smPath = path.join(ROOT, 'sitemap.xml');
-const today = process.argv[2] || stop('Datum fehlt: node tools/build-lang.mjs JJJJ-MM-TT (Regel 24)');
 const urls = [['/', '1.0'], ['/en/', '1.0'], ['/hr/', '1.0'], ['/presse.html', '0.5']];  // Impressum/Datenschutz bewusst nicht: noindex seit 12.10.2026 (privatsphaere-2026-10-12.mjs)
 const sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
   + urls.map(([u, p]) => '  <url><loc>' + SITE + u + '</loc><lastmod>' + today + '</lastmod><priority>' + p + '</priority>'
     + (['/', '/en/', '/hr/'].includes(u) ? ['de', 'en', 'hr'].map(l => '<xhtml:link rel="alternate" hreflang="' + l + '" href="' + SITE + PATHS[l] + '"/>').join('') + '<xhtml:link rel="alternate" hreflang="x-default" href="' + SITE + '/"/>' : '')
-    + '</url>').join('\n') + '\n</urlset>\n';
+    + '</url>').join('\n') + '\n'
+  // Tagebuch-Block (tools/devlog/bauen.mjs) bleibt stehen, sonst fielen die /devlog/-Seiten bei jedem Lauf aus der Sitemap (13.10.2026)
+  + ((fs.existsSync(smPath) ? fs.readFileSync(smPath, 'utf8') : '').match(/  <!-- tagebuch:anfang[\s\S]*?<!-- tagebuch:ende -->\n?/) || [''])[0]
+  + '</urlset>\n';
 fs.writeFileSync(smPath, sm);
 report.push('sitemap.xml: ' + urls.length + ' Adressen, lastmod ' + today);
 console.log(report.join('\n'));
