@@ -23,7 +23,7 @@ const schreibe = schreiber(WURZEL, fs, path);
 const geschrieben = [];
 for (const r of SEITEN) {
   for (const s of SPRACHEN) {
-    const fragen = r.bloecke.map((b) => `<section class="frage"><h2>${esc(b.h[s])}</h2><p>${esc(b.p[s])}${b.bisGruender && gruenderNoch ? ' ' + esc(b.bisGruender[s]) : ''}</p></section>`).join('');
+    const fragen = r.bloecke.filter((b) => !b.nurBisGruender || gruenderNoch).map((b) => `<section class="frage"><h2>${esc(b.h[s])}</h2><p>${esc(b.p[s])}${b.bisGruender && gruenderNoch ? ' ' + esc(b.bisGruender[s]) : ''}</p></section>`).join('');
     const inhalt = `<header><div class="k">Trainer's Boardroom · ${esc(r.kicker[s])}</div><h1>${esc(r.h1[s])}</h1><p class="lead">${esc(r.lead[s])}</p></header>`
       + fragen
       + `<section class="schluss"><p>${esc(r.hinweis[s])}</p><a class="knopf" href="${playLink('ratgeber-' + r.id)}" target="_blank" rel="noopener">${esc(r.knopf[s])}</a><p>${esc(r.sprachen[s])}</p></section>`;

@@ -91,4 +91,87 @@ export const SEITEN = [
     },
     kicker: { de: 'Ratgeber', en: 'Guide', hr: 'Vodič' },
   },
+  {
+    // Seite 2 (Fabians Wahl „A: Kostenlos ausprobieren“, 14.10.2026). Belegt im Spiel: probeRegeln.ts (erste Saison je Karriere frei, der Kauf
+    // entscheidet nur, OB weitergespielt wird, nie wie die Welt rechnet) und config/bezahlung.ts (Gründer bis 31.10.). Der Gründer-Block
+    // (`nurBisGruender`) steht nur auf Seiten, die vor dem Stichtag gebaut werden.
+    id: 'kostenlos',
+    pfad: { de: '/fussballmanager-kostenlos/', en: '/en/free-football-manager/', hr: '/hr/football-manager-besplatno/' },
+    link: { de: 'Fußballmanager kostenlos testen', en: 'Free football manager', hr: 'Football manager besplatno' },
+    titel: {
+      de: 'Fußballmanager kostenlos ausprobieren: die erste Saison gratis',
+      en: 'Free football manager for Android: play a full season first',
+      hr: 'Football manager besplatno: prva sezona bez plaćanja',
+    },
+    beschreibung: {
+      de: 'Ein Fußballmanager für Android, den du erst eine ganze Saison spielst und dann entscheidest: kein Abo, keine Werbung, einmalig 6,99 €.',
+      en: 'A football manager for Android you can play for a whole season before you decide: no subscription, no ads, €6.99 once.',
+      hr: 'Nogometni menadžer za Android u kojem prvo odigraš cijelu sezonu, a onda odlučiš: bez pretplate, bez reklama, jednokratno 6,99 €.',
+    },
+    h1: {
+      de: 'Erst eine Saison spielen, dann entscheiden',
+      en: 'Play a full season, then decide',
+      hr: 'Prvo odigraj sezonu, onda odluči',
+    },
+    lead: {
+      de: 'Bei Trainer\'s Boardroom beginnt jede neue Karriere mit einer kostenlosen Saison. Kein Abo, keine Werbung, keine Testphase, die nach drei Tagen endet.',
+      en: 'Every new career in Trainer\'s Boardroom starts with a free season. No subscription, no ads, no three-day trial that runs out before the first derby.',
+      hr: 'Svaka nova karijera u igri Trainer\'s Boardroom počinje besplatnom sezonom. Bez pretplate, bez reklama i bez probnog razdoblja koje istekne za tri dana.',
+    },
+    bloecke: [
+      {
+        nurBisGruender: true,
+        h: { de: 'Bis 31. Oktober: für immer gratis', en: 'Until 31 October: free for good', hr: 'Do 31. listopada: zauvijek besplatno' },
+        p: {
+          de: 'Wer Trainer\'s Boardroom bis zum 31. Oktober installiert, behält das ganze Spiel für immer gratis.',
+          en: 'Install Trainer\'s Boardroom by 31 October and the full game stays free for you, for good.',
+          hr: 'Tko instalira Trainer\'s Boardroom do 31. listopada, cijelu igru ima zauvijek besplatno.',
+        },
+      },
+      {
+        h: { de: 'Was in der Gratis-Saison drin ist', en: 'What the free season includes', hr: 'Što je u besplatnoj sezoni' },
+        p: {
+          de: 'Die ganze erste Saison mit allem, was das Spiel hat: Liga und Pokal, Transfers und Verträge, Live-Spiele mit Eingriffen von der Seitenlinie und ein Vorstand, der dich an deinem Saisonziel misst. Nichts davon ist abgespeckt.',
+          en: 'The whole first season with everything the game has: league and cup, transfers and contracts, live matches you can change from the touchline, and a board that holds you to your target. None of it is cut down.',
+          hr: 'Cijela prva sezona sa svime što igra ima: liga i kup, transferi i ugovori, utakmice uživo na koje utječeš s klupe i uprava koja te ocjenjuje po cilju sezone. Ništa nije okrnjeno.',
+        },
+      },
+      {
+        h: { de: 'Was danach kommt', en: 'What comes after', hr: 'Što dolazi poslije' },
+        p: {
+          de: 'Willst du nach der ersten Saison weiterspielen, schaltest du das ganze Spiel mit einem einmaligen Kauf frei: 6,99 €, angezeigt in deiner Währung. Kein Abo und nichts, womit man sich Vorteile kauft: Der Kauf entscheidet nur, ob du weiterspielst, nie, wie stark dein Verein ist. Freiwillige Extras, die später dazukommen, kosten extra.',
+          en: 'If you want to carry on after that first season, one purchase unlocks the full game: €6.99, shown in your currency. No subscription and nothing that buys you an edge: paying decides whether you keep playing, never how strong your club is. Optional extras that arrive later are sold separately.',
+          hr: 'Želiš li igrati dalje nakon prve sezone, cijelu igru otključavaš jednokratnom kupnjom: 6,99 €, prikazano u tvojoj valuti. Bez pretplate i bez ičega čime se kupuje prednost: kupnja odlučuje samo hoćeš li igrati dalje, nikad koliko je jak tvoj klub. Dodaci koji stignu kasnije, ako ih želiš, plaćaju se zasebno.',
+        },
+      },
+      {
+        h: { de: 'Und wenn ich neu anfange?', en: 'What if I start again?', hr: 'A ako krenem ispočetka?' },
+        p: {
+          de: 'Jede neue Karriere beginnt wieder mit einer kostenlosen Saison. So kannst du einen kleinen Verein und einen großen ausprobieren, bevor du dich entscheidest.',
+          en: 'Every new career starts with another free season, so you can try a small club and a big one before you make up your mind.',
+          hr: 'Svaka nova karijera opet počinje besplatnom sezonom, pa možeš isprobati i mali i veliki klub prije nego što odlučiš.',
+        },
+      },
+      {
+        h: { de: 'Offline, auch beim Ausprobieren', en: 'Offline, even while you try it', hr: 'Offline i dok isprobavaš' },
+        p: {
+          de: 'Auch die Gratis-Saison läuft komplett ohne Internet und ohne Konto. Google Play brauchst du nur einmal, für den Kauf selbst.',
+          en: 'The free season runs entirely without internet and without an account. You only need Google Play once, for the purchase itself.',
+          hr: 'I besplatna sezona radi potpuno bez interneta i bez računa. Google Play trebaš samo jednom, za samu kupnju.',
+        },
+      },
+    ],
+    hinweis: {
+      de: 'Das Spiel ist im Early Access: Es wächst mit jedem Update, ein paar Ecken und Kanten hat es noch. Der Wechsel zu einem anderen Verein während der Karriere kommt 2027.',
+      en: 'It\'s early access, so there are still rough edges, and it grows with every update. Moving to another club during a career arrives in 2027.',
+      hr: 'Igra je u ranom pristupu i raste sa svakim ažuriranjem, ponegdje je još neuglađena. Prelazak u drugi klub tijekom karijere stiže 2027.',
+    },
+    knopf: { de: 'Bei Google Play laden', en: 'Get it on Google Play', hr: 'Preuzmi na Google Playu' },
+    sprachen: {
+      de: 'Auf Deutsch, Englisch und Kroatisch. Für Android, das iPhone folgt 2027.',
+      en: 'In English, German and Croatian. Android now, iPhone in 2027.',
+      hr: 'Na hrvatskom, engleskom i njemačkom. Android sada, iPhone 2027.',
+    },
+    kicker: { de: 'Ratgeber', en: 'Guide', hr: 'Vodič' },
+  },
 ];
