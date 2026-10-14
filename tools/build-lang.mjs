@@ -5,6 +5,7 @@
 // Aufruf: node tools/build-lang.mjs   (im Webseiten-Repo). Idempotent: mehrfacher Lauf aendert nichts mehr.
 import fs from 'fs';
 import path from 'path';
+import { SEITEN as RATGEBER } from './ratgeber/seiten.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '..');
 const SRC = path.join(ROOT, 'index.html');
@@ -163,6 +164,8 @@ function patchScript(html, lang) {
   if (lang !== 'de') html = html.replace(/src="preview\.mp4"/g, 'src="/preview.mp4"');
   // e) Entwickler-Tagebuch je Sprache (/devlog/ · /en/devlog/ · /hr/devlog/, tools/devlog/bauen.mjs) — Menue, Hinweis, Fuss (13.10.2026)
   if (lang !== 'de') html = html.replace(/href="\/devlog\//g, 'href="' + PATHS[lang] + 'devlog/');
+  // f) Ratgeber-Seiten je Sprache (tools/ratgeber/seiten.mjs, eigene Adressen je Sprache) — Fuss (14.10.2026)
+  if (lang !== 'de') for (const r of RATGEBER) html = html.split('href="' + r.pfad.de + '"').join('href="' + r.pfad[lang] + '"');
   return html;
 }
 
@@ -188,8 +191,9 @@ const sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.si
   + urls.map(([u, p]) => '  <url><loc>' + SITE + u + '</loc><lastmod>' + today + '</lastmod><priority>' + p + '</priority>'
     + (['/', '/en/', '/hr/'].includes(u) ? ['de', 'en', 'hr'].map(l => '<xhtml:link rel="alternate" hreflang="' + l + '" href="' + SITE + PATHS[l] + '"/>').join('') + '<xhtml:link rel="alternate" hreflang="x-default" href="' + SITE + '/"/>' : '')
     + '</url>').join('\n') + '\n'
-  // Tagebuch-Block (tools/devlog/bauen.mjs) bleibt stehen, sonst fielen die /devlog/-Seiten bei jedem Lauf aus der Sitemap (13.10.2026)
-  + ((fs.existsSync(smPath) ? fs.readFileSync(smPath, 'utf8') : '').match(/  <!-- tagebuch:anfang[\s\S]*?<!-- tagebuch:ende -->\n?/) || [''])[0]
+  // Die Bloecke der Unterseiten bleiben stehen, sonst fielen sie bei jedem Lauf aus der Sitemap: Tagebuch (tools/devlog/bauen.mjs, 13.10.2026)
+  // und Ratgeber (tools/ratgeber/bauen.mjs, 14.10.2026) — gilt fuer beide Bloecke
+  + ((fs.existsSync(smPath) ? fs.readFileSync(smPath, 'utf8') : '').match(/  <!-- (tagebuch|ratgeber):anfang[\s\S]*?<!-- \1:ende -->\n?/g) || []).join('')
   + '</urlset>\n';
 fs.writeFileSync(smPath, sm);
 report.push('sitemap.xml: ' + urls.length + ' Adressen, lastmod ' + today);
