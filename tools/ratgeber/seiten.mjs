@@ -64,9 +64,9 @@ export const SEITEN = [
       {
         h: { de: 'Genug Tiefe für viele Saisons?', en: 'Enough depth for a long career?', hr: 'Dovoljno dubine za dugu karijeru?' },
         p: {
-          de: '100 Ligen in 51 Ländern, 1.459 Vereine, nationale Pokale und drei Europapokale. Transfers laufen in zwei Schritten wie im echten Fußball: erst die Ablöse mit dem Verein, dann Gehalt und Laufzeit mit dem Spieler. Dazu Leihen und Ratenzahlung. Die Spiele laufen Minute für Minute, und du greifst von der Seitenlinie ein. Über dir sitzt ein Vorstand, der dich an deinem Saisonziel misst.',
-          en: '100 leagues in 51 countries, 1,459 clubs, domestic cups and three European competitions. Transfers come in two steps, the fee with the club and then wages and length with the player, plus loans and instalments. Matches play out minute by minute and you can make changes from the touchline. Above you sits a board that holds you to your target.',
-          hr: '100 liga u 51 zemlji, 1.459 klubova, domaći kupovi i tri europska natjecanja. Transferi idu u dva koraka kao u pravom nogometu: prvo odšteta s klubom, zatim plaća i trajanje ugovora s igračem. Tu su i posudbe i plaćanje na rate. Utakmice se igraju minutu po minutu, a ti reagiraš s klupe. Iznad tebe je uprava koja te ocjenjuje po cilju sezone.',
+          de: '100 Ligen in 51 Ländern, 1.458 Vereine, nationale Pokale und drei Europapokale. Transfers laufen in zwei Schritten wie im echten Fußball: erst die Ablöse mit dem Verein, dann Gehalt und Laufzeit mit dem Spieler. Dazu Leihen und Ratenzahlung. Die Spiele laufen Minute für Minute, und du greifst von der Seitenlinie ein. Über dir sitzt ein Vorstand, der dich an deinem Saisonziel misst.',
+          en: '100 leagues in 51 countries, 1,458 clubs, domestic cups and three European competitions. Transfers come in two steps, the fee with the club and then wages and length with the player, plus loans and instalments. Matches play out minute by minute and you can make changes from the touchline. Above you sits a board that holds you to your target.',
+          hr: '100 liga u 51 zemlji, 1.458 klubova, domaći kupovi i tri europska natjecanja. Transferi idu u dva koraka kao u pravom nogometu: prvo odšteta s klubom, zatim plaća i trajanje ugovora s igračem. Tu su i posudbe i plaćanje na rate. Utakmice se igraju minutu po minutu, a ti reagiraš s klupe. Iznad tebe je uprava koja te ocjenjuje po cilju sezone.',
         },
       },
       {
