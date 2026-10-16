@@ -6,9 +6,9 @@
 // Kroatisch genusfrei („Igru imaš od prije", wie im Spiel), nach den .hr-Quellen.
 export default {
   hero_lead: {
-    de: "Wer bis 31. Oktober installiert, spielt für immer gratis. Komplett offline, ohne Werbung. Eine Welt aus 1.459 Vereinen, die auch ohne dich weiterspielt. Läuft, fertig ist es nicht: ich baue jede Woche weiter dran.",
-    en: "Install by 31 October and the game stays free for you, for good. Fully offline, no ads. A world of 1,459 clubs that keeps playing without you. It runs, but it isn't finished: I keep building on it every week.",
-    hr: "Tko instalira do 31. listopada, igra zauvijek besplatno. Potpuno offline, bez reklama. Svijet od 1.459 klubova koji igra i bez tebe. Radi, ali gotova nije: gradim dalje, svaki tjedan.",
+    de: "Wer bis 31. Oktober installiert, spielt für immer gratis. Komplett offline, ohne Werbung. Eine Welt aus 1.458 Vereinen, die auch ohne dich weiterspielt. Läuft, fertig ist es nicht: ich baue jede Woche weiter dran.",
+    en: "Install by 31 October and the game stays free for you, for good. Fully offline, no ads. A world of 1,458 clubs that keeps playing without you. It runs, but it isn't finished: I keep building on it every week.",
+    hr: "Tko instalira do 31. listopada, igra zauvijek besplatno. Potpuno offline, bez reklama. Svijet od 1.458 klubova koji igra i bez tebe. Radi, ali gotova nije: gradim dalje, svaki tjedan.",
   },
 
   play_live_hint: {

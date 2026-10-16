@@ -42,9 +42,9 @@ export default {
   },
 
   sc_p: {
-    de: "Kein kleines Manager-Spiel: <b>100 Ligen in 51 Ländern</b>, <b>1.459 Vereine</b> und über <b>30.000 Spieler</b>, mit Auf- und Abstieg, einer Relegation, wie sie in jedem Land wirklich gespielt wird, nationalen Pokalen, Europapokal und einem Transfermarkt, auf dem die anderen Vereine selbstständig handeln. Alles von einem einzigen Entwickler, ohne Pay-to-Win.",
-    en: "No lightweight manager game: <b>100 leagues across 51 countries</b>, <b>1,459 clubs</b> and over <b>30,000 players</b>, with promotion and relegation, play-offs run the way each country really runs them, national cups, European competition and a transfer market where the other clubs do their own wheeling and dealing. All built by a single developer, no pay-to-win.",
-    hr: "Ovo nije mala menadžerska igra: <b>100 liga u 51 zemlji</b>, <b>1.459 klubova</b> i preko <b>30.000 igrača</b>, s ulaskom u viši rang i ispadanjem, doigravanjem kakvo se u svakoj zemlji stvarno igra, nacionalnim kupovima, europskim natjecanjima i prijelaznim rokovima u kojima ostali klubovi sami kupuju, prodaju i posuđuju. Sve od jednog jedinog developera, bez pay-to-wina.",
+    de: "Kein kleines Manager-Spiel: <b>100 Ligen in 51 Ländern</b>, <b>1.458 Vereine</b> und über <b>30.000 Spieler</b>, mit Auf- und Abstieg, einer Relegation, wie sie in jedem Land wirklich gespielt wird, nationalen Pokalen, Europapokal und einem Transfermarkt, auf dem die anderen Vereine selbstständig handeln. Alles von einem einzigen Entwickler, ohne Pay-to-Win.",
+    en: "No lightweight manager game: <b>100 leagues across 51 countries</b>, <b>1,458 clubs</b> and over <b>30,000 players</b>, with promotion and relegation, play-offs run the way each country really runs them, national cups, European competition and a transfer market where the other clubs do their own wheeling and dealing. All built by a single developer, no pay-to-win.",
+    hr: "Ovo nije mala menadžerska igra: <b>100 liga u 51 zemlji</b>, <b>1.458 klubova</b> i preko <b>30.000 igrača</b>, s ulaskom u viši rang i ispadanjem, doigravanjem kakvo se u svakoj zemlji stvarno igra, nacionalnim kupovima, europskim natjecanjima i prijelaznim rokovima u kojima ostali klubovi sami kupuju, prodaju i posuđuju. Sve od jednog jedinog developera, bez pay-to-wina.",
   },
 
   eh_chips: {
