@@ -5,6 +5,142 @@
 // zahlen: { wert, nach?, komma?, text } — „wert“ zählt beim Sichtbarwerden hoch; nur gemessene oder belegte Zahlen.
 
 export const EINTRAEGE = [
+  // 1.5 „Dein Land in Europa“ (Regel 55): Stoff Nikola 16.10.2026, 15:52 + Nachtrag MP944/E-865/E-866, Fabians Klick zum Namen 16.10.2026.
+  {
+    version: '1.5', slug: '1-5',
+    datum: { de: 'Oktober 2026', en: 'October 2026', hr: 'listopad 2026.' },
+    name: { de: 'Dein Land in Europa', en: 'Your country in Europe', hr: 'Tvoja zemlja u Europi' },
+    kurz: {
+      de: 'Was deine Vereine in Europa holen, zählt jetzt für dein ganzes Land: Startplätze, Ruf und ein Stück vom Geld. Und die Welt wird dabei nicht mehr von allein immer reicher.',
+      en: 'What your clubs do in Europe now counts for the whole country: European places, reputation and a slice of the money. And the world no longer gets richer all on its own.',
+      hr: 'Ono što klubovi osvoje u Europi sada vrijedi za cijelu zemlju: europska mjesta, ugled i dio novca. A svijet više ne postaje bogatiji sam od sebe.',
+    },
+    blick: {
+      de: [
+        'Die Fünfjahreswertung lebt: Ergebnisse in Europa bringen deinem Land Startplätze – oder kosten welche.',
+        'Steigt dein Land, steigt der Ruf deiner Liga – und mit ihm Fernsehgeld, Sponsoren und Zuschauer.',
+        'Über jeder Liga stehen Rang und Startplätze deines Landes, ein Tipp zeigt die ganze Wertung.',
+        'Nach dem Finale des Continental Cup kommt der Brief mit der neuen Wertung.',
+        'Unter der Tabelle steht, wohin der Pokalsieger in Europa fährt.',
+      ],
+      en: [
+        'The coefficient ranking now moves: results in Europe win your country European places, or lose them.',
+        'As your country climbs, so does your league – more TV money, bigger sponsors, bigger crowds.',
+        'Above every league: your country’s rank and European places. Tap it for the full ranking.',
+        'After the Continental Cup final, a letter brings the new ranking.',
+        'Below the table: where the cup winners are heading in Europe.',
+      ],
+      hr: [
+        'Petogodišnja ljestvica koeficijenata živi: rezultati u Europi donose ili oduzimaju europska mjesta.',
+        'Kad zemlja napreduje, raste i ugled lige – a s njim novac od TV prava, sponzori i publika.',
+        'Iznad svake lige: mjesto tvoje zemlje i europska mjesta. Dodirom otvaraš cijelu ljestvicu.',
+        'Dan nakon velikog europskog finala stiže pismo s novom ljestvicom.',
+        'Ispod tablice piše kamo pobjednik kupa ide u Europi.',
+      ],
+    },
+    zahlen: [
+      { wert: 51, text: {
+        de: 'Länder kämpfen in der Fünfjahreswertung um ihre Startplätze, mit 100 Ligen und 1.458 Vereinen. Als Maßstab dient die echte UEFA-Wertung der Jahre 2009 bis 2026.',
+        en: 'countries now fight for their European places in the coefficient ranking, with 100 leagues and 1,458 clubs. The yardstick is the real UEFA ranking from 2009 to 2026.',
+        hr: 'zemlja se bori za europska mjesta na petogodišnjoj ljestvici koeficijenata, uz 100 liga i 1.458 klubova. Mjerilo je prava UEFA-ina ljestvica od 2009. do 2026.' } },
+      { wert: 4.5, komma: 1, nach: { de: ' bis 5,0', en: ' to 5.0', hr: ' do 5,0' }, text: {
+        de: 'Ränge bewegt sich ein Land in fünf Saisons im Schnitt. Im echten Fußball sind es 4,1.',
+        en: 'places is how far a country moves in five seasons on average. In real football it\'s 4.1.',
+        hr: 'mjesta u prosjeku se zemlja pomakne u pet sezona. U pravom nogometu to je 4,1.' } },
+      { wert: 13, nach: { de: ' bis 15 %', en: ' to 15%', hr: ' do 15 %' }, text: {
+        de: 'der Länder springen in fünf Saisons um zehn Ränge oder mehr. Echt sind es rund 10 %. Das ist Absicht: eine starke Saison bringt ein kleines Land weit nach vorn.',
+        en: 'of countries jump ten places or more in five seasons. In real football it\'s around 10%. That\'s on purpose: one strong season can carry a small country a long way.',
+        hr: 'zemalja u pet sezona skoči deset mjesta ili više. U pravom nogometu to je oko 10 %. To je namjerno: jedna jaka sezona može malu zemlju daleko pogurati.' } },
+      { wert: 1.4, komma: 1, nach: { de: ' bis 1,7', en: ' to 1.7', hr: ' do 1,7' }, text: {
+        de: 'Ränge bewegen sich die sechs Spitzenländer in fünf Saisons. Oben ist es zäh, echt sind es 1,0.',
+        en: 'places is all the top six countries move in five seasons. It\'s hard to shift the top, in real football it\'s 1.0.',
+        hr: 'mjesta pomaknu se šest vodećih zemalja u pet sezona. Vrh se teško mijenja, u pravom nogometu to je 1,0.' } },
+      { wert: 3, nach: { de: ' %', en: '%', hr: ' %' }, text: {
+        de: 'mehr Umsatz haben alle Vereine der Welt zusammen nach 20 Saisons, höchstens. Vorher waren es bis zu 32 %.',
+        en: 'more revenue, at most, for all the world\'s clubs together after 20 seasons. Before, it was up to 32%.',
+        hr: 'više prihoda najviše imaju svi klubovi svijeta zajedno nakon 20 sezona. Prije je bilo i do 32 %.' } },
+      { wert: 24, nach: { de: ' %', en: '%', hr: ' %' }, text: {
+        de: 'mehr Gehalt bekommen alle Spieler zusammen nach 20 Saisons, höchstens. In 1.4 waren es 25 %, ohne die neue Bremse über 40 %.',
+        en: 'more in wages, at most, for all players together after 20 seasons. In 1.4 it was 25%, without the new brake over 40%.',
+        hr: 'više plaće najviše primaju svi igrači zajedno nakon 20 sezona. U verziji 1.4 bilo je 25 %, bez nove kočnice više od 40 %.' } },
+    ],
+    hindernis: {
+      titel: { de: 'Die Welt wurde von allein reicher', en: 'The world got richer on its own', hr: 'Svijet se bogatio sam od sebe' },
+      text: {
+        de: 'In den Testläufen über 20 Saisons ist uns aufgefallen, dass die ganze Welt immer reicher wurde, ohne dass irgendwer mehr geleistet hat. Stieg ein Land in der Wertung, bekam es auf einmal Fernsehgeld wie ein großer Markt. Mit dem Geld wurden seine Vereine stärker, gewannen mehr in Europa und stiegen weiter. Ein Kreis ohne Ende, am Schluss bis zu einem Drittel mehr Umsatz. Am einfachsten wäre es gewesen, das Geld einfach abzuschneiden. Ich wollte aber die realistischste Lösung: Im echten Fußball richtet sich das Fernsehgeld nach dem Markt eines Landes und nicht nach seinem Rang. Belgien ist in der UEFA-Wertung weit nach oben geklettert, die Stadien dort sind deswegen nicht voller geworden. Jetzt folgt das Geld dem Erfolg nur noch ein Stück, und erst ab der neuen Saison, so wie echte Fernseh- und Sponsorenverträge laufen.',
+        en: 'In the test runs over 20 seasons we noticed the whole world kept getting richer without anyone doing more. When a country climbed the ranking, it suddenly got TV money like a big market. With that money its clubs got stronger, won more in Europe and climbed even further. A loop with no end, and by the finish up to a third more revenue. The easiest fix would have been to just cut the money off. But I wanted the most realistic one: in real football, TV money follows the size of a country\'s market, not its ranking. Belgium climbed a long way in the UEFA ranking and its stadiums didn\'t get any fuller. Now the money follows success only part of the way, and only from the next season, the way real TV and sponsorship deals work.',
+        hr: 'U testovima kroz 20 sezona primijetili smo da cijeli svijet postaje sve bogatiji, a da nitko ne radi ništa više. Kad bi neka zemlja napredovala na ljestvici, odjednom bi dobila novac od TV prava kao veliko tržište. S tim novcem njezini su klubovi jačali, više pobjeđivali u Europi i još više napredovali. Krug bez kraja, na kraju i do trećine više prihoda. Najlakše bi bilo jednostavno odrezati novac. Ja sam htio najrealnije rješenje: u pravom nogometu novac od TV prava ovisi o veličini tržišta, a ne o mjestu na ljestvici. Belgija je na UEFA-inoj ljestvici jako napredovala, a stadioni joj zbog toga nisu postali puniji. Sada novac prati uspjeh samo djelomično, i to tek od nove sezone, kao što i pravi ugovori za TV prava i sponzore vrijede po sezoni.',
+      },
+    },
+    aenderungen: {
+      de: {
+        neu: [
+          'Die Fünfjahreswertung lebt. Was die Vereine eines Landes in den drei Europapokalen holen, bringt dem Land Punkte. Es zählen die letzten fünf Saisons, die jüngste am meisten.',
+          'Der Rang eines Landes entscheidet, wie viele Startplätze es in Europa bekommt und in welcher Runde seine Vereine einsteigen.',
+          'Über jeder Tabelle steht eine Zeile mit dem Rang deines Landes und seinen Startplätzen je Wettbewerb, vor jedem Wettbewerb sein Pokal. Ein Tipp darauf zeigt alle 51 Länder mit Rang, Sprung, dieser Saison, gesamt und Plätzen.',
+          'Am 5. Juli einer neuen Karriere kommt ein Brief: wo dein Land steht und was das für dich bedeutet.',
+          'Jede Saison, am Tag nach dem Finale des Continental Cup, kommt ein Brief: gehalten, geklettert oder gefallen, mit der ganzen Liste.',
+          'Unter der Tabelle der ersten Liga steht, in welchen Wettbewerb und in welche Runde der Pokalsieger fährt. In der Zeile darüber zeigt ein silberner Pokal, welcher Wettbewerb das ist.',
+          'Steigt ein Land, steigt der Ruf seiner Liga. Startplätze und Ansehen ziehen sofort mit. Fernsehgeld, Sponsoren, Fanshop und Zuschauer folgen ab der neuen Saison, aber nur ein Stück weit, wie im echten Fußball: das Geld eines Landes hängt vor allem an seinem Markt.',
+          'Wer mit einem kleinen Land in Europa gewinnt, holt sich das Geld über Europa und über bessere Spieler, nicht über einen Fernsehvertrag, als wäre er plötzlich England.',
+          'Werden die besten Vereine eines Landes stärker als der Rest der Welt, gibt es auch ein wenig mehr Geld fürs Land.',
+          '„Was ist neu“ im Hauptmenü zeigt die Karte „Neu in 1.5 · Dein Land in Europa“.',
+        ],
+        besser: [
+          'Das Geld der Welt bleibt über viele Saisons stabil, und die Gehälter steigen langsamer als in 1.4.',
+          'Die erste Gehaltsforderung eines Spielers ist immer ein runder Betrag.',
+        ],
+        repariert: [
+          'Ein Spieler, der leicht verletzt und zugleich gesperrt ist, steht nicht mehr in deiner Elf. Seit 1.3 blockierte er sonst den Spielstart.',
+          'Ein Verein, der pleite ist, steigt nicht mehr auf. Vorher stieg er auf und wurde danach noch einmal zwangsweise abgestiegen, und der Liga darüber fehlte für immer ein Verein. Jetzt bleibt an seiner Stelle der beste Absteiger der Liga darüber oben.',
+        ],
+      },
+      en: {
+        neu: [
+          'The coefficient ranking now moves. Whatever a country\'s clubs achieve in the three European competitions earns that country points. The last five seasons count, the most recent one most of all.',
+          'A country\'s rank decides how many European places it gets and which round its clubs enter in.',
+          'Above every league table there\'s a row with your country\'s rank and its places for each competition, with each competition\'s trophy in front. Tap it to see all 51 countries with rank, movement, this season, total and places.',
+          'On 5 July of a new career a letter arrives: where your country stands and what that means for you.',
+          'Every season, the day after the Continental Cup final, a letter tells you whether your country held its place, climbed or dropped, with the full list.',
+          'Below the top-flight table you can see which competition and which round the cup winners go into. In the row above, a silver cup marks that competition.',
+          'When a country climbs, its league\'s reputation rises with it. European places and standing follow straight away. TV money, sponsors, the club shop and crowds follow from the next season, but only part of the way, just like in real football: a country\'s money depends mostly on its market.',
+          'Win in Europe with a small country and you earn your money through Europe and better players, not through a TV deal as if you were suddenly England.',
+          'If a country\'s best clubs become stronger than the rest of the world, there\'s a little more money for that country too.',
+          '"What\'s new" in the main menu shows the card "New in 1.5 · Your country in Europe".',
+        ],
+        besser: [
+          'The world\'s money stays stable over many seasons, and wages rise more slowly than in 1.4.',
+          'A player\'s first wage demand is always a round figure.',
+        ],
+        repariert: [
+          'A player who is carrying a knock and suspended at the same time no longer ends up in your starting XI. Since 1.3 he could stop the match from starting.',
+          'A club that has gone bust no longer gets promoted. Before, it went up and was then relegated again by force, leaving the league above one club short for good. Now the best of the relegated sides in the league above stays up in its place.',
+        ],
+      },
+      hr: {
+        neu: [
+          'Petogodišnja ljestvica koeficijenata živi. Ono što klubovi neke zemlje postignu u tri europska natjecanja donosi toj zemlji bodove. Računa se posljednjih pet sezona, a najviše ona najnovija.',
+          'Mjesto zemlje na ljestvici određuje koliko europskih mjesta dobiva i u kojem kolu njezini klubovi ulaze u natjecanje.',
+          'Iznad svake tablice stoji redak s mjestom tvoje zemlje i njezinim europskim mjestima za svako natjecanje, a ispred svakog natjecanja stoji njegov pehar. Dodirom otvaraš popis svih zemalja (ukupno 51) s mjestom, pomakom, ovom sezonom, ukupnim bodovima i europskim mjestima.',
+          'Petog srpnja nove karijere stiže pismo: gdje je tvoja zemlja i što to znači za tebe.',
+          'Svake sezone, dan nakon finala Continental Cupa, stiže pismo: je li zemlja zadržala mjesto, napredovala ili pala, s cijelim popisom.',
+          'Ispod tablice prve lige piše u koje natjecanje i u koje kolo ide pobjednik kupa. U retku iznad to natjecanje označava srebrni pehar.',
+          'Kad zemlja napreduje, raste i ugled njezine lige. Europska mjesta i ugled prate to odmah. Novac od TV prava, sponzori, fan shop i publika slijede od nove sezone, ali samo djelomično, kao u pravom nogometu: novac zemlje ovisi prije svega o njezinu tržištu.',
+          'Tko s malom zemljom pobjeđuje u Europi, novac zarađuje kroz Europu i bolje igrače, a ne kroz TV ugovor kao da je odjednom Engleska.',
+          'Postanu li najbolji klubovi neke zemlje jači od ostatka svijeta, i zemlja dobiva malo više novca.',
+          '„Što je novo“ u glavnom izborniku prikazuje karticu „Novo u verziji 1.5 · Tvoja zemlja u Europi“.',
+        ],
+        besser: [
+          'Novac u svijetu ostaje stabilan kroz mnogo sezona, a plaće rastu sporije nego u verziji 1.4.',
+          'Prvi zahtjev igrača za plaću uvijek je okrugao iznos.',
+        ],
+        repariert: [
+          'Igrač koji je lakše ozlijeđen i istodobno suspendiran više nije u tvojoj početnoj postavi. Od verzije 1.3 mogao je zaustaviti početak utakmice.',
+          'Klub koji je bankrotirao više ne ulazi u viši rang. Prije bi ušao, a zatim bi ga prisilno vratili natrag, pa bi liga iznad zauvijek ostala klub kraća. Sada umjesto njega gore ostaje najbolji od klubova koji ispadaju iz lige iznad.',
+        ],
+      },
+    },
+  },
   // 1.4 „Der Trainer“ (Regel 55): Stoff Nikola 13./14./15.10.2026 (Fassungen c, e, f), Fabians Klicks „Passt so“, „Ganz rein“, „Ja, dann Update“.
   {
     version: '1.4', slug: '1-4',
