@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { EINTRAEGE, FRUEHER } from './eintraege.mjs';
-import { SPRACHEN, esc, seite, schreiber, sitemapBlock, sitemapEintrag } from '../seitenrahmen.mjs';
+import { SPRACHEN, esc, seite, schreiber, sitemapBlock, sitemapEintrag, playLink } from '../seitenrahmen.mjs';
 
 const WURZEL = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 
@@ -20,6 +20,7 @@ const L = {
     blick: 'Auf einen Blick', zahlen: 'In Zahlen', hindernis: 'Was beim Bauen schiefging', alle: 'Alle Änderungen in',
     neu: 'Neu', besser: 'Besser', repariert: 'Repariert', frueher: 'Frühere Versionen',
     alleEintraege: 'Alle Einträge im Tagebuch', teilen: 'Eigene Seite zu',
+    bitteFrage: 'Du spielst schon?', bitteLink: 'Bewerte es ehrlich im Play Store',
   },
   en: {
     ordner: '/en/devlog/', titel: 'Dev diary', kicker: 'Dev diary',
@@ -29,6 +30,7 @@ const L = {
     blick: 'At a glance', zahlen: 'In numbers', hindernis: 'What went wrong while building it', alle: 'All changes in',
     neu: 'New', besser: 'Better', repariert: 'Fixed', frueher: 'Earlier versions',
     alleEintraege: 'All diary entries', teilen: 'Own page for',
+    bitteFrage: 'Already playing?', bitteLink: 'Leave an honest review on Google Play',
   },
   hr: {
     ordner: '/hr/devlog/', titel: 'Dnevnik razvoja', kicker: 'Dnevnik razvoja',
@@ -38,6 +40,7 @@ const L = {
     blick: 'Ukratko', zahlen: 'U brojkama', hindernis: 'Što je pošlo po zlu', alle: 'Sve promjene u verziji',
     neu: 'Novo', besser: 'Bolje', repariert: 'Popravljeno', frueher: 'Ranije verzije',
     alleEintraege: 'Svi zapisi u dnevniku', teilen: 'Zasebna stranica za',
+    bitteFrage: 'Već igraš?', bitteLink: 'Ostavi iskrenu ocjenu na Google Playu',
   },
 };
 
@@ -53,6 +56,7 @@ const CSS = `.eintrag{background:var(--surface);border:1px solid var(--line);bor
 details{background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:12px 14px}summary{cursor:pointer;font-weight:700;color:var(--gold)}
 .gruppe{margin-top:12px}.gruppe b{display:block;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--leise);margin-bottom:6px}
 .fuss-eintrag{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:15px}
+.bitte{margin:0;font-size:16px}.bitte a{color:var(--gold)}
 .frueher{display:flex;flex-wrap:wrap;gap:8px}.frueher span{font-size:14px;color:var(--leise);border:1px solid var(--line);border-radius:999px;padding:4px 10px}`;
 
 const SKRIPT = `(function(){var ruhig=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(ruhig||!('IntersectionObserver' in window))return;
@@ -69,9 +73,12 @@ function eintragHtml(e, s, eigeneSeite) {
   const zahlen = (e.zahlen || []).map((z) => `<div class="zahl"><span class="wert" data-ziel="${z.wert}"${z.komma ? ` data-komma="${z.komma}" data-dez="${s === 'en' ? '.' : ','}"` : ''}${z.nach ? ` data-nach="${esc(z.nach[s])}"` : ''}>${esc(zahlText(z, s))}</span><span class="t">${esc(z.text[s])}</span></div>`).join('');
   const a = e.aenderungen[s];
   const gruppe = (titel, liste) => (liste && liste.length ? `<div class="gruppe"><b>${esc(titel)}</b><ul>${liste.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : '');
+  // Bitte um eine ehrliche Bewertung am Ende jedes Eintrags (Fabians Klick 16.10.2026: „offen bitten“, nie mit Belohnung);
+  // dieselben Worte wie unter dem Play-Knopf der Startseite (tools/bewerten-2026-10-13.mjs), damit die Sache überall gleich heißt.
+  const bitte = `<p class="bitte">${esc(t.bitteFrage)} <a href="${playLink('devlog-bewerten')}" target="_blank" rel="noopener">${esc(t.bitteLink)}</a></p>`;
   const fuss = eigeneSeite
-    ? `<div class="fuss-eintrag"><a href="${t.ordner}">${esc(t.alleEintraege)}</a></div>`
-    : `<div class="fuss-eintrag"><a href="${t.ordner}${e.slug}/">${esc(t.teilen)} ${esc(e.version)}</a></div>`;
+    ? `${bitte}<div class="fuss-eintrag"><a href="${t.ordner}">${esc(t.alleEintraege)}</a></div>`
+    : `${bitte}<div class="fuss-eintrag"><a href="${t.ordner}${e.slug}/">${esc(t.teilen)} ${esc(e.version)}</a></div>`;
   return `<article class="eintrag" id="v${e.slug}">
 <div class="kopf"><div class="k">${esc(t.kicker)} · ${esc(e.datum[s])}</div><div class="v">${esc(e.version)}</div><h2>${esc(e.name[s])}</h2><p>${esc(e.kurz[s])}</p></div>
 <div class="koerper">
