@@ -5,6 +5,145 @@
 // zahlen: { wert, nach?, komma?, text } — „wert“ zählt beim Sichtbarwerden hoch; nur gemessene oder belegte Zahlen.
 
 export const EINTRAEGE = [
+  // 1.6 „Deine Akademie“ (Regel 55): Stoff Nikola 20.10.2026, 04:4x + Nachtrag E-918 (ohne Rangplatz der Akademie, Vorbericht mit erwarteter Elf).
+  {
+    version: '1.6', slug: '1-6',
+    datum: { de: 'Oktober 2026', en: 'October 2026', hr: 'listopad 2026.' },
+    name: { de: 'Deine Akademie', en: 'Your academy', hr: 'Tvoja akademija' },
+    kurz: {
+      de: 'Deine Akademie bekommt von dir Geld und eine Richtung, und die anderen Trainer stellen jetzt auch mitten in der Saison um. Vor jedem Pflichtspiel sagt dir dein Co-Trainer, mit welcher Elf er beim Gegner rechnet.',
+      en: 'You give your academy its money and its direction, and the other managers now change things too, even mid-season. Before every competitive game your assistant tells you which eleven he expects the other side to put out.',
+      hr: 'Akademiji ti daješ novac i smjer, a treneri drugih klubova sada mijenjaju sustav i usred sezone. Prije svake službene utakmice pomoćni trener ti kaže kakvu postavu očekuje kod suparnika.',
+    },
+    blick: {
+      de: [
+        'Du bestimmst, wie viel Geld deine Akademie bekommt – und wen sie holt: Breite, Spitze oder Treue.',
+        'Am 24. Juni meldet die Akademie, wie viele Talente der neue Jahrgang bringt – und ob ein Juwel dabei ist.',
+        'Trainer anderer Vereine stellen ihr System um, wenn Erfolg, Kader oder Geld es verlangen – auch in der Saison.',
+        'Vor jedem Pflichtspiel kommt der Vorbericht des Co-Trainers: Formation, Torjäger, Ausfälle, letztes Duell.',
+      ],
+      en: [
+        'You set your academy’s budget and its focus – numbers, elite or loyalty – and so who comes through.',
+        'On 24 June the academy reports how big the new intake is, and whether there is a gem among them.',
+        'Other managers change their system when results, the squad or money demand it – even mid-season.',
+        'Before every competitive game, your assistant reports: expected shape, top scorer, team news, last meeting.',
+      ],
+      hr: [
+        'Ti određuješ koliko novca dobiva akademija i koga dovodi: širina, vrh ili vjernost.',
+        'Akademija 24. lipnja javlja koliko talenata stiže u novoj generaciji i ima li među njima dragulja.',
+        'Treneri drugih klubova mijenjaju sustav kad to traže rezultati, momčad ili novac, pa i usred sezone.',
+        'Prije svake službene utakmice pomoćni trener javlja: formacija, najbolji strijelac, izostanci, zadnji susret.',
+      ],
+    },
+    zahlen: [
+      { wert: 1.8, komma: 1, nach: { de: ' bis 2,5', en: ' to 2.5', hr: ' do 2,5' }, text: {
+        de: 'Talente je Saison ziehen die Vereine im Testlauf in ihren Profikader, je nach Größe des Vereins. Die kleinen schafften vorher nur 1,2.',
+        en: 'academy players a season now make the step up to the first team in our test runs, depending on the size of the club. The small clubs used to manage just 1.2.',
+        hr: 'talenta po sezoni klubovi u testu sada dižu u prvu momčad, ovisno o veličini kluba. Mali klubovi prije su uspijevali samo 1,2.' } },
+      { wert: 40, nach: { de: ' %', en: '%', hr: ' %' }, text: {
+        de: 'der Talente sind treu oder bescheiden, wenn die Akademie auf Treue setzt. Vorher waren es 13 %.',
+        en: 'of the youngsters are loyal or modest when the academy goes for loyalty. Before, it was 13%.',
+        hr: 'talenata vjerno je ili skromno kad akademija ide na vjernost. Prije ih je bilo 13 %.' } },
+      { wert: 60, nach: { de: ' bis 67 %', en: ' to 67%', hr: ' do 67 %' }, text: {
+        de: 'der Computer-Trainer bleiben in der ersten Saison bei ihrer Formation. Vorher waren es 94 %, also fast alle, und die erste Saison war starr.',
+        en: 'of the other managers stick with their formation through the first season. Before, it was 94%, so almost all of them, and the first season felt frozen.',
+        hr: 'trenera drugih klubova u prvoj sezoni ostaje pri svojoj formaciji. Prije ih je bilo 94 %, gotovo svi, pa je prva sezona bila ukočena.' } },
+      { wert: 200, text: {
+        de: 'junge Vertragslose suchen jeden Sommer noch einen Verein, ungefähr. Vorher waren es rund 2.000. Die anderen gehen wie im echten Fußball meist in den Amateurfußball, und in den Kadern stehen trotzdem so viele junge Spieler wie vorher.',
+        en: 'or so young free agents are still looking for a club each summer. Before, it was around 2,000. The rest mostly drop into amateur football like in real life, and squads still have as many young players as before.',
+        hr: 'mladih igrača bez ugovora, otprilike, svakog ljeta još traži klub. Prije ih je bilo oko 2.000. Ostali, kao i u pravom nogometu, uglavnom odlaze u amaterski nogomet, a u momčadima je i dalje jednako mnogo mladih igrača.' } },
+      { wert: 25, nach: { de: ' %', en: '%', hr: ' %' }, text: {
+        de: 'aller Spieler gehen ungefähr mit einem auslaufenden Vertrag in deine erste Saison. Vorher waren es 6 %, fast nur die Ältesten. Im echten Fußball ist es etwa ein Fünftel.',
+        en: 'of all players, roughly, start your first season in the last year of their contract. Before, it was 6%, almost only the oldest. In real football it\'s about a fifth.',
+        hr: 'svih igrača, otprilike, ulazi u tvoju prvu sezonu u posljednjoj godini ugovora. Prije ih je bilo 6 %, gotovo samo najstariji. U pravom nogometu to je otprilike petina.' } },
+      { wert: 230, nach: { de: ' MB', en: ' MB', hr: ' MB' }, text: {
+        de: 'groß ist die Welt nach 20 Saisons höchstens, weil alte Saisons jetzt aufgeräumt werden. Ohne das Aufräumen wäre sie jede Saison um rund 24 MB gewachsen.',
+        en: 'is the most the world takes up after 20 seasons, because old seasons now get cleared out. Without that it would grow by about 24 MB every season.',
+        hr: 'najviše zauzima svijet nakon 20 sezona, jer se stare sezone sada pospremaju. Bez toga bi rastao za otprilike 24 MB svake sezone.' } },
+    ],
+    hindernis: {
+      titel: { de: 'Der Markt lief voll', en: 'The market filled up', hr: 'Tržište se prepunilo' },
+      text: {
+        de: 'In der letzten Prüfung vor dem Release ist uns der Markt der Vertragslosen vollgelaufen: zum Saisonstart war bis zu jeder neunte Profi ohne Verein. Deshalb hat 1.6 einen Tag gewartet. Die Suche fand gleich drei Ursachen. Die Uhr für die Vertragslosen fing zu spät an zu laufen, Talente aus der Akademie verloren beim Saisonwechsel ein Vertragsjahr, und in der Startwelt liefen fast alle Verträge in denselben Jahren aus. Im echten Fußball suchen nur die Besten ohne Vertrag lange weiter, die meisten jungen Spieler gehen in den Amateurfußball. So ist es jetzt auch bei uns: zum Saisonstart sind rund 5 % ohne Verein statt bis zu 11 %, und in der Startwelt läuft bei etwa jedem fünften Spieler der Vertrag nach der ersten Saison aus. Namen, Stärken und Vereine bleiben dabei dieselben.',
+        en: 'In the last check before release, the free agent market filled up: at the start of a season up to one pro in nine had no club. That\'s why 1.6 waited a day. The search turned up three causes at once. The clock for free agents started too late, academy players lost a year of their contract when the season changed, and in the starting world almost every contract ran out in the same few years. In real football only the best keep looking for long without a contract, most young players drop into amateur football. That\'s how it works here now too: at the start of a season around 5% are without a club instead of up to 11%, and in the starting world about one player in five has a contract that ends after the first season. Names, ratings and clubs all stay the same.',
+        hr: 'U zadnjoj provjeri prije izlaska prepunilo nam se tržište igrača bez ugovora: na početku sezone bez kluba je bio i svaki deveti profesionalac. Zato je verzija 1.6 pričekala jedan dan. Potraga je našla čak tri uzroka. Sat za igrače bez ugovora krenuo je prekasno, talenti iz akademije gubili su godinu ugovora pri prijelazu u novu sezonu, a u početnom svijetu gotovo su svi ugovori istjecali u istim godinama. U pravom nogometu bez ugovora dugo traže samo najbolji, a većina mladih odlazi u amaterski nogomet. Tako je sada i kod nas: na početku sezone bez kluba je oko 5 % igrača umjesto i do 11 %, a u početnom svijetu otprilike svakom petom igraču ugovor istječe nakon prve sezone. Imena, ocjene i klubovi pritom ostaju isti.',
+      },
+    },
+    aenderungen: {
+      de: {
+        neu: [
+          'Die Akademie hat im Verein eine eigene Karte: du legst fest, wie viel Geld sie im Monat bekommt (Sparkurs, Normal oder Investieren) und wen sie holt (Breite, Spitze oder Treue). Ganz oben steht groß, wie viele eigene Spieler in Profikadern stehen.',
+          'Im Team siehst du bei der Akademie, wie viele Talente im Jahr kommen und auf welchem Niveau.',
+          'Am 24. Juni kommt ein Brief zum neuen Jahrgang: wie viele Talente kommen und ob ein Juwel dabei ist.',
+          'Die Akademie gilt auch in Karrieren, die du schon vor 1.6 angefangen hast.',
+          'Die Trainer der anderen Vereine stellen um, wenn Erfolg, Kader oder Geld es verlangen, auch mitten in der Saison. Gegen zwei Stürmer antworten manche mit einer Dreierkette.',
+          'Vor jedem Pflichtspiel kommt der Vorbericht deines Co-Trainers: die Tabelle, auf einem Spielfeld die Elf, mit der er beim Gegner rechnet, dazu Torjäger, Ausfälle und das letzte Duell. Die Elf ist seine Vorhersage, am Spieltag kann der Gegner anders aufstellen. Stellt der Gegner anders auf als gewohnt, sagt er es dir vor dem Spiel.',
+          'Kein stummes Nein mehr beim Kauf: fehlt dem Verkäufer der Ersatz, nennt er einen höheren Preis und den Grund. Die Idee kam aus einer Bewertung im Play Store.',
+          'Im Hauptmenü erscheinen Nachrichten vom Studio: wenn eine neue Version da ist, und kurze Hinweise, etwa wenn wir gerade an einem Fehler arbeiten.',
+          '„Was ist neu“ im Hauptmenü zeigt die Karte „Neu in 1.6 · Deine Akademie“.',
+        ],
+        besser: [
+          'Der Markt der Vertragslosen bleibt schlank: junge Spieler, deren Vertrag ihr Verein nicht verlängert, gehen wie im echten Fußball meist in den Amateurfußball. Nur die Besten suchen weiter.',
+          'Die Startwelt hat echte Vertragslaufzeiten: bei etwa jedem fünften Spieler läuft der Vertrag nach der ersten Saison aus. Namen, Stärken und Vereine bleiben dieselben.',
+          'Nicht jedes Talent wird groß: manche junge Spieler bleiben wieder stehen, wie im echten Fußball.',
+          'Große Vereine holen zu ihren Stars auch Talente dazu.',
+          'Alte Saisons werden aufgeräumt, damit dein Spielstand nicht immer weiter wächst.',
+        ],
+        repariert: [
+          'Wirst du nur über das Torverhältnis Meister, kommt jetzt auch der Brief zur Meisterschaft.',
+          'Angebote, die du bekommst, kannst du eine Woche lang annehmen. Vorher war nach einer Woche Bedenkzeit jedes siebte schon nicht mehr zu haben.',
+        ],
+      },
+      en: {
+        neu: [
+          'The academy now has its own card at the club: you set its budget each month (cut back, standard or invest) and who it brings in (numbers, elite or loyalty). Right at the top, in big numbers: how many of your graduates are in senior squads.',
+          'In the squad, the academy shows how many youngsters come through each year and at what level.',
+          'On 24 June a letter tells you about the new intake: how many youngsters are coming and whether there\'s a gem among them.',
+          'The academy also works in careers you started before 1.6.',
+          'Other managers change their system when results, the squad or money demand it, even mid-season. Against two strikers, some go to a back three.',
+          'Before every competitive game your assistant brings his report: the table, the eleven he expects the opponent to field on a pitch, plus top scorer, team news and the last meeting. That eleven is his prediction, on the day the other side can line up differently. If they set up differently than usual, he tells you before kick-off.',
+          'No more silent no on transfers: if the selling club has no replacement, it names a higher fee and tells you why. The idea came from a review on Google Play.',
+          'Messages from the studio show up in the main menu: when a new version is out, and short notes, for example when we\'re working on a bug.',
+          '"What\'s new" in the main menu shows the card "New in 1.6 · Your academy".',
+        ],
+        besser: [
+          'The free agent market stays lean: young players whose clubs don\'t renew them mostly drop into amateur football, like in real life. Only the best keep looking.',
+          'The starting world has real contract lengths: for about one player in five, the contract ends after the first season. Names, ratings and clubs stay the same.',
+          'Not every youngster makes it: some young players stall again, like in real football.',
+          'Big clubs now bring in young talent alongside their stars.',
+          'Old seasons get cleared out, so your save doesn\'t keep growing.',
+        ],
+        repariert: [
+          'If you win the league on goal difference alone, the title letter now arrives too.',
+          'Offers you receive can be accepted for a full week. Before, one in seven was already gone after a week to think it over.',
+        ],
+      },
+      hr: {
+        neu: [
+          'Akademija u klubu ima svoju karticu: određuješ koliko novca mjesečno dobiva (štednja, normalno ili ulaganje) i koga dovodi (širina, vrh ili vjernost). Na vrhu krupno piše koliko igrača iz vlastite škole igra u prvim momčadima.',
+          'U momčadi kod akademije vidiš koliko talenata stiže godišnje i na kojoj razini.',
+          'Dvadeset četvrtog lipnja stiže pismo o novoj generaciji: koliko talenata dolazi i ima li među njima dragulja.',
+          'Akademija vrijedi i u karijerama koje si započeo prije verzije 1.6.',
+          'Treneri drugih klubova mijenjaju sustav kad to traže rezultati, momčad ili novac, pa i usred sezone. Protiv dva napadača neki prelaze na obranu s tri igrača.',
+          'Prije svake službene utakmice stiže najava pomoćnog trenera: tablica, na terenu postava koju očekuje kod suparnika, uz to najbolji strijelac, izostanci i zadnji susret. Ta je postava njegova procjena, na dan utakmice suparnik može izaći i drukčije. Ako suparnik postavi momčad drukčije nego obično, reći će ti to prije utakmice.',
+          'Nema više šutljivog odbijanja: ako klubu koji prodaje nedostaje zamjena, traži višu odštetu i kaže zašto. Ideja je stigla iz jedne recenzije na Google Playu.',
+          'U glavnom izborniku pojavljuju se poruke studija: kad stigne nova verzija i kratke obavijesti, na primjer kad radimo na nekoj grešci.',
+          '„Što je novo“ u glavnom izborniku prikazuje karticu „Novo u verziji 1.6 · Tvoja akademija“.',
+        ],
+        besser: [
+          'Tržište igrača bez ugovora ostaje malo: mladi igrači kojima klub ne produži ugovor uglavnom odlaze u amaterski nogomet, kao i u pravom nogometu. Samo najbolji traže dalje.',
+          'Početni svijet ima prave duljine ugovora: otprilike svakom petom igraču ugovor istječe nakon prve sezone. Imena, ocjene i klubovi ostaju isti.',
+          'Ne postaje svaki talent velik igrač: neki mladi igrači opet zapnu, kao i u pravom nogometu.',
+          'Veliki klubovi uz svoje zvijezde dovode i talente.',
+          'Stare sezone se pospremaju, pa tvoja karijera ne raste u nedogled.',
+        ],
+        repariert: [
+          'Postaneš li prvak samo zbog bolje gol-razlike, sada stiže i pismo o naslovu.',
+          'Ponude koje dobiješ možeš prihvatiti cijeli tjedan. Prije je nakon tjedan dana razmišljanja svaka sedma već propala.',
+        ],
+      },
+    },
+  },
   // 1.5 „Dein Land in Europa“ (Regel 55): Stoff Nikola 16.10.2026, 15:52 + Nachtrag MP944/E-865/E-866, Fabians Klick zum Namen 16.10.2026.
   {
     version: '1.5', slug: '1-5',
