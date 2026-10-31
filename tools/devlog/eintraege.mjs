@@ -8,7 +8,7 @@ export const EINTRAEGE = [
   // 1.7 „Vorstand und Ausbau“ (Regel 55): Stoff Nikola 30.10.2026 + Nachtrag 31.10.2026, 01:5x (Mitgliedschaft, Erinnerung, Weltvergleich, Fehlerbericht, Einstieg; Geld-Kachel E-1112/E-1114).
   {
     version: '1.7', slug: '1-7',
-    datum: { de: 'Oktober 2026', en: 'October 2026', hr: 'listopad 2026.' },   // Fabian 31.10.2026, 02:4x: Freigabe heute um 9 Uhr
+    datum: { de: 'Oktober 2026', en: 'October 2026', hr: 'listopad 2026.' },   // Fabian 31.10.2026, vor 02:44: Freigabe heute um 9 Uhr
     name: { de: 'Vorstand und Ausbau', en: 'Board and build-up', hr: 'Uprava i razvoj kluba' },
     kurz: {
       de: 'Deine Scouts ziehen jetzt mit einem Auftrag los, und dein Stadion kannst du ausbauen. Der Vorstand hat seine eigene Geduld, und die Medizin ist neu. Unten im Fußball ist im Sommer mehr los: kleine Vereine schließen kürzere Verträge und holen öfter Spieler ohne Ablöse.',
