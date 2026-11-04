@@ -39,7 +39,7 @@
   .pb-nt{top:8px;width:13%;max-width:150px;height:18px;border:2px solid var(--gold);border-bottom:none;} .pb-nb{bottom:8px;width:13%;max-width:150px;height:18px;border:2px solid var(--gold);border-top:none;}
   .pb-circ{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:clamp(150px,24vw,280px);height:clamp(150px,24vw,280px);border:2px solid var(--gold);border-radius:50%;}
   .pb-spot{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:8px;height:8px;border-radius:50%;background:var(--gold);}
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);} .reveal.in{opacity:1;transform:none;}
+  .reveal{opacity:1;transform:none;}
   @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
   .nav{position:fixed;top:0;left:0;right:0;height:64px;z-index:60;background:rgba(14,14,14,.72);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
   .nav-in{max-width:1120px;margin:0 auto;height:100%;padding:0 clamp(18px,4vw,28px);display:flex;align-items:center;justify-content:space-between;}
@@ -177,7 +177,10 @@
 <style>
 /* --- Alpha-Umbau --- */
 
-.hero-lead{max-width:610px;margin-top:18px;font-weight:500;font-size:17px;line-height:1.62;opacity:.78}
+.hero-lead{max-width:610px;margin:18px auto 0;font-weight:500;font-size:17px;line-height:1.62;opacity:.78}
+.hero-shot{width:min(62vw,270px);aspect-ratio:418/870;margin:20px auto 0;border-radius:16px;overflow:hidden;border:1px solid rgba(201,168,76,.35);box-shadow:0 10px 34px rgba(201,168,76,.12);}
+.hero-shot img{width:100%;height:100%;object-fit:cover;}
+@media(max-width:600px){.hero{min-height:0;padding:76px 18px 40px;} .hero h1{font-size:38px;} .hero .sub{font-size:16px;margin-top:12px;} .hero-shot{margin-top:16px;width:52vw;}}
 .hero-lead b{color:var(--gold);font-weight:700}
 .ghint{margin-top:12px;font-size:15px;font-weight:500;opacity:.62}
 
@@ -263,8 +266,9 @@
   <header class="hero" id="hero"><div class="glow"></div><div class="hero-in">
     <div class="eyebrow" data-i18n="eyebrow">Nogometni menadžer za mobitel</div>
     <h1>TRAINER'S<span class="g">BOARDROOM</span></h1>
-    <p class="sub" data-i18n="sub">Tvoj klub. Tvoja sezona. Svaku odluku donosiš ti, a na utakmici vodiš momčad s klupe, minutu po minutu.</p> <p class="hero-lead" data-i18n="hero_lead">Potpuno offline, bez reklama i bez pretplate. 1.458 klubova igra svoju sezonu i kad ne gledaš. Još nije gotova, a ja je gradim dalje, ažuriranje po ažuriranje.</p>
-    <div class="playbox" id="playbox" hidden><div class="pb-k" data-i18n="play_k">Kako ući</div><div class="pb-steps"><a class="pb-step" id="pstep1" target="_blank" rel="noopener"><span class="pb-n">1</span><span data-i18n="play_1">Pridruži se testnoj grupi</span></a><a class="pb-step" id="pstep2" target="_blank" rel="noopener"><span class="pb-n">2</span><span data-i18n="play_2">Prijavi se i preuzmi</span></a></div><p class="pb-hint" data-i18n="play_hint">Koristi Google račun s kojim si u Play Storeu.</p></div><a class="btn solid playlive" id="playLive" hidden target="_blank" rel="noopener" data-i18n="play_live">Preuzmi na Google Playu</a><p class="pb-hint plh" id="playLiveHint" hidden data-i18n="play_live_hint">Rani pristup · za Android · bez računa</p><p class="nl-line"><span data-i18n="nl_q">Želiš pratiti što se događa?</span> <a href="#waitlist" data-i18n="nl_a">Upiši se na newsletter</a></p><p class="nl-line"><span data-i18n="rv_q">Već igraš?</span> <a href="https://play.google.com/store/apps/details?id=com.bosniii.trainersboardroom&referrer=utm_source%3Dwebsite%26utm_medium%3Dweb%26utm_content%3Dbewerten" target="_blank" rel="noopener" data-i18n="rv_a">Ostavi iskrenu ocjenu na Google Playu</a></p>
+    <p class="sub" data-i18n="sub">Tvoj klub. Tvoja sezona. Svaku odluku donosiš ti, a na utakmici vodiš momčad s klupe, minutu po minutu.</p>
+    <figure class="hero-shot"><img src="/img/screens/screen-6.webp" width="418" height="870" alt=""></figure>
+    <div class="playbox" id="playbox" hidden><div class="pb-k" data-i18n="play_k">Kako ući</div><div class="pb-steps"><a class="pb-step" id="pstep1" target="_blank" rel="noopener"><span class="pb-n">1</span><span data-i18n="play_1">Pridruži se testnoj grupi</span></a><a class="pb-step" id="pstep2" target="_blank" rel="noopener"><span class="pb-n">2</span><span data-i18n="play_2">Prijavi se i preuzmi</span></a></div><p class="pb-hint" data-i18n="play_hint">Koristi Google račun s kojim si u Play Storeu.</p></div><a class="btn solid playlive" id="playLive" hidden target="_blank" rel="noopener" data-i18n="play_live">Preuzmi na Google Playu</a><p class="pb-hint plh" id="playLiveHint" hidden data-i18n="play_live_hint">Rani pristup · za Android · bez računa</p><p class="hero-lead" data-i18n="hero_lead">Potpuno offline, bez reklama i bez pretplate. 1.458 klubova igra svoju sezonu i kad ne gledaš. Još nije gotova, a ja je gradim dalje, ažuriranje po ažuriranje.</p><p class="nl-line"><span data-i18n="nl_q">Želiš pratiti što se događa?</span> <a href="#waitlist" data-i18n="nl_a">Upiši se na newsletter</a></p><p class="nl-line"><span data-i18n="rv_q">Već igraš?</span> <a href="https://play.google.com/store/apps/details?id=com.bosniii.trainersboardroom&referrer=utm_source%3Dwebsite%26utm_medium%3Dweb%26utm_content%3Dbewerten" target="_blank" rel="noopener" data-i18n="rv_a">Ostavi iskrenu ocjenu na Google Playu</a></p>
       
     </div>
   </div></header>
