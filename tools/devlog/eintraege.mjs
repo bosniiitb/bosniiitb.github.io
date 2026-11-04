@@ -5,6 +5,177 @@
 // zahlen: { wert, nach?, komma?, text } — „wert“ zählt beim Sichtbarwerden hoch; nur gemessene oder belegte Zahlen.
 
 export const EINTRAEGE = [
+  // 1.8 „Die Welt erzählt“ (Regel 55): Stoff Nikola 01.–03.11.2026 (Gedächtnis stoff-1-8, Mappe v1.8), Text Luka 04.11.2026; Quelle docs/announcements/v1.8/tagebuch-1-8.mjs.
+  {
+    version: '1.8', slug: '1-8',
+    datum: { de: 'November 2026', en: 'November 2026', hr: 'studeni 2026.' },
+    name: { de: 'Die Welt erzählt', en: 'A world of stories', hr: 'Svijet priča' },
+    kurz: {
+      de: 'Die News haben jetzt zwei Fächer, die 50 größten Vereine der Welt haben ihre eigenen Geschichten, und deine Liga erinnert sich. Spieler machen Schlagzeilen, und ein neuer Trainer stellt vom ersten Tag an selbst auf.',
+      en: 'The news has two tabs now, the 50 biggest clubs in the world have their own stories and your league remembers. Players make the headlines, and a new manager picks his own team from day one.',
+      hr: 'Vijesti sada imaju dvije kartice, 50 najvećih klubova svijeta ima svoje priče, a tvoja liga pamti. Igrači pune naslovnice, a novi trener od prvog dana sam slaže momčad.',
+    },
+    blick: {
+      de: [
+        'Die News in zwei Fächern: „Für dich“ zeigt deine Liga und deine Spieler, „Welt“ alles andere.',
+        'Die Großen der Welt: Krisen, Siegesserien, Meister, Abstürze und Trainerwechsel der 50 größten Namen.',
+        'Deine Liga erinnert sich: Serien, Titelrennen, „erstmals seit …“ und runde Jahrestage ihrer Meister.',
+        'Hattrick, das erste Tor eines Talents, die Rückkehr nach langer Verletzung: Spieler machen Schlagzeilen.',
+        'Ein neuer Trainer stellt am ersten Tag selbst auf – und die Presse meldet, wenn er das System wechselt.',
+        'Im Kassenbuch steht unter „Leihen“ jeder Rückruf eines Leihspielers.',
+        'Ein geladener Spielstand läuft genau so weiter, als hättest du durchgespielt.',
+      ],
+      en: [
+        'News in two tabs: “For you” covers your league and your players, “World” everything else.',
+        'The world’s giants: slumps, winning runs, titles, relegations and sackings at the 50 biggest clubs.',
+        'Your league remembers: runs, title races, “first time since …” and milestone anniversaries of its champions.',
+        'A hat-trick, a youngster’s first goal, a comeback from a long injury: players make the headlines.',
+        'A new manager names his line-up on day one – and the press reports it when the system changes.',
+        'In your books, every recall of a loaned-out player now shows under “Loans”.',
+        'A loaded save carries on exactly as if you had played straight through.',
+      ],
+      hr: [
+        'Vijesti u dvije kartice: „Za tebe“ prati tvoju ligu i tvoje igrače, „Svijet“ sve ostalo.',
+        'Velikani svijeta: krize, nizovi pobjeda, naslovi, ispadanja i smjene trenera u 50 najvećih klubova.',
+        'Tvoja liga pamti: nizove, borbu za naslov, „prvi put nakon …“ i okrugle obljetnice njezinih prvaka.',
+        'Hat-trick, prvi gol mladog talenta, povratak nakon duge ozljede: igrači pune naslovnice.',
+        'Novi trener već prvog dana sam slaže momčad – a mediji javljaju kad promijeni sustav.',
+        'U blagajni je svaki prekid posudbe sada zapisan pod „Posudbe“.',
+        'Učitana karijera nastavlja se točno kao da prekida nije ni bilo.',
+      ],
+    },
+    zahlen: [
+      { wert: 95, nach: { de: ' von 100', en: ' in 100', hr: ' od 100' }, text: {
+        de: 'neuen Trainern spielen schon im ersten Spiel ihr eigenes System. Vorher waren es 20 von 100. Am Saisonende sind es 94 von 100, vorher traf das nur etwa jeder zweite, und das zufällig.',
+        en: 'new managers play their own system in their very first match. It used to be 20. By the end of the season it’s 94, where before about every second one only got there by chance.',
+        hr: 'novih trenera već u prvoj utakmici igra svoj sustav. Prije ih je bilo 20. Na kraju sezone to je 94 od 100, a prije je otprilike svaki drugi do toga došao slučajno.' } },
+      { wert: 11, text: {
+        de: 'Gerüchte gab es im Testlauf in einem Sommerfenster, und hinter jedem steckt ein echtes Gebot mit einem Ausgang. Früher waren sie gewürfelt: Von 283 hatte kein einziges ein echtes Gebot dahinter.',
+        en: 'rumours came up in one summer window in our test run, each with a real bid behind it and an outcome. They used to be random: of 283, not one had a real bid behind it.',
+        hr: 'glasina bilo je u testu u jednom ljetnom prijelaznom roku, a iza svake stoji prava ponuda i njezin ishod. Prije su bile nasumične: od 283 nijedna nije imala pravu ponudu iza sebe.' } },
+      { wert: 62, nach: { de: ' von 3.304', en: ' of 3,304', hr: ' od 3.304' }, text: {
+        de: 'Spieltagen weltweit brachten vorher eine Sensation, und 60 von 101 Ligen hatten nie eine. Jetzt misst sich eine Sensation an der eigenen Liga.',
+        en: 'matchdays around the world used to bring an upset, and 60 of the 101 leagues never had one. Now an upset is judged against its own league.',
+        hr: 'kola diljem svijeta prije je donosilo senzaciju, a 60 od 101 lige nije je imala nikad. Sada se senzacija mjeri prema vlastitoj ligi.' } },
+      { wert: 9, text: {
+        de: 'Meldungen sind es im Schnitt ungefähr je Woche, und das ist bewusst ausgesiebt. Mit den ersten Vorschlägen wären es allein aus den neuen Arten 68 je Liga und Saison gewesen.',
+        en: 'news items a week is roughly the average, and that’s on purpose. With our first ideas the new kinds alone would have made 68 per league and season.',
+        hr: 'vijesti tjedno otprilike je prosjek, i to namjerno. S prvim prijedlozima samo bi nove vrste donijele 68 vijesti po ligi i sezoni.' } },
+      { wert: 58, nach: { de: ' von 58', en: ' of 58', hr: ' od 58' }, text: {
+        de: 'Tabellen der Welt sind nach dem Laden genau so wie beim Durchspielen. Vorher waren bis zu 20 anders.',
+        en: 'tables of the world now match after loading, exactly as if you had played straight through. Up to 20 used to differ.',
+        hr: 'tablica svijeta nakon učitavanja ista je kao da nije bilo prekida. Prije ih je do 20 bilo drukčije.' } },
+      { wert: 9, nach: { de: ' %', en: '%', hr: ' %' }, text: {
+        de: 'der Fan-Sätze sind in den sieben Sprachen noch gleich gebaut, genau so viel wie reiner Zufall. Vorher waren es 74 %, Zufall wären 43 % gewesen.',
+        en: 'of the fan lines are still built the same way across the seven languages, which is just what chance gives you. It used to be 74%, where chance would have been 43%.',
+        hr: 'navijačkih rečenica na sedam jezika još je jednako složeno, točno koliko bi dao čisti slučaj. Prije je to bilo 74 %, a slučaj bi dao 43 %.' } },
+      { wert: 54, nach: { de: ' bis 59 %', en: ' to 59%', hr: ' do 59 %' }, text: {
+        de: 'der Wechsel ab der 3. Liga laufen jetzt ohne Ablöse. In 1.7 waren es knapp 52 %, in der echten 3. Liga sind es 72 %.',
+        en: 'of moves from the third tier down are now free transfers. In 1.7 it was just under 52%, in Germany’s 3. Liga it’s 72%.',
+        hr: 'prijelaza od treće lige naniže sada ide bez odštete. U 1.7 bilo je nešto manje od 52 %, a u pravoj njemačkoj 3. ligi 72 %.' } },
+      { wert: 464, text: {
+        de: 'Prüfer liefen in der letzten großen Runde vor dem Paket, 460 waren im ersten Durchgang grün. Drei lagen nur an der Zeit unter Volllast, einer hatte selbst falsch gezählt. Fünf Saisons haben wir zweimal gespielt, und beide Male kam Saison für Saison genau dasselbe raus.',
+        en: 'checks ran in the last big round before the build, and 460 were green first time. Three only ran out of time under full load, and one had miscounted by itself. We played five seasons twice, and both came out exactly the same, season by season.',
+        hr: 'provjera radilo je u zadnjoj velikoj rundi prije paketa, a 460 ih je odmah bilo zeleno. Tri su samo zapela na vremenu pod punim opterećenjem, a jedna je sama krivo brojala. Pet sezona odigrali smo dvaput i oba puta izašlo je potpuno isto, sezonu po sezonu.' } },
+    ],
+    hindernis: {
+      titel: { de: 'Geladen war nicht gleich durchgespielt', en: 'A loaded save wasn’t quite the same game', hr: 'Učitana karijera nije bila ista igra' },
+      text: {
+        de: 'Der unangenehmste Fund: Ein Spielstand lief nach dem Laden etwas anders weiter als ohne Unterbrechung. Zwei Dinge hatte sich das Spiel beim ersten Lesen gemerkt, statt sie neu nachzusehen. Gefunden hat das ein neuer Prüfer, der beide Wege nebeneinander fährt. Dann waren es zu viele Meldungen. Mit den ersten Einstellungen wärst du zugeschüttet worden, und erst an einem Bild mit echten Beispielen haben wir gesehen, wo es zu viel wird. Die große Prüfrunde mussten wir dreimal fahren. In der ersten war ein Prüfer rot, weil in kleinen Ligen zu wenige Spieler ablösefrei wechselten, 48 %, in echt sind es 72 %. Das kam gar nicht von 1.8, das saß seit 1.7 an der Kante, aber ich wollte es noch in 1.8 repariert haben. Die Reparatur hat dann zwei andere Prüfer knapp gerissen: Nach einem großen Verkauf kam seltener ein junger Nachfolger, und unruhige Vereine kauften im Sommer nicht mehr mehr als ruhige. Also haben wir vier Stufen in denselben Welten nachgemessen, und in der Mitte passten alle drei. Und beim Umbau der Fans hat sich eine Sprache zweimal wieder aus der anderen gespiegelt, das haben wir neu geschrieben. Beim gebogenen Apostroph haben wir mit rund 300 Stellen gerechnet, es waren 2.256.',
+        en: 'The worst one first: a save carried on slightly differently after loading. The game had kept two things from its first read instead of looking them up again. A new check caught it, one that runs both ways side by side. Then the news. With our first settings you would have drowned in it, and we only saw where it got too much when we had a picture with real examples in front of us. The big test round took three goes. In the first one a check went red because too few players in small leagues moved on a free, 48% against 72% in real life. 1.8 hadn’t caused that, it had been on the edge since 1.7, but I wanted it fixed now anyway. That fix then tipped two other checks. Young replacements after a big sale got rarer, and restless clubs stopped buying more than calm ones in the summer. So we measured four levels in the same worlds, and the middle one suited all three. While redoing the fans, the languages started copying each other again, twice, so those lines got written again. And the curly apostrophe: we guessed about 300 places, it was 2,256.',
+        hr: 'Najneugodnije je bilo ovo: karijera se nakon učitavanja nastavljala malo drukčije nego bez prekida. Igra je dvije stvari zapamtila pri prvom čitanju, umjesto da ih ponovno pogleda. To je uhvatila nova provjera koja oba puta vozi usporedno. Zatim vijesti: s prvim postavkama zatrpale bi te, a tek smo na slici sa stvarnim primjerima vidjeli gdje je previše. Veliku rundu provjera vozili smo tri puta. U prvoj je jedna bila crvena jer je u malim ligama premalo igrača prelazilo bez odštete, 48 %, a u stvarnosti 72 %. To nije došlo s 1.8, stajalo je na rubu još od 1.7, ali htio sam da se popravi odmah. Popravak je onda za dlaku srušio dvije druge provjere. Nakon velike prodaje rjeđe je dolazio mladi nasljednik, a nemirni klubovi ljeti više nisu kupovali više od mirnih. Zato smo u istim svjetovima izmjerili četiri stupnja i srednji je odgovarao svima trima. Kod navijačkih rečenica jezici su se dvaput opet počeli zrcaliti, pa smo ih napisali iznova. A zaobljeni apostrof: računali smo s oko 300 mjesta, bilo ih je 2.256.',
+      },
+    },
+    aenderungen: {
+      de: {
+        neu: [
+          'Die News haben zwei Fächer: „Für dich“ zeigt deine Liga und deine Spieler, „Welt“ alles andere. An jedem Fach steht, wie viel du noch nicht gelesen hast.',
+          'Die 50 größten Vereine der Welt haben eigene Geschichten: die Krise und wie sie endet, eine lange Siegesserie, der Meister am Tag der Entscheidung, der Absturz im Sommer, die Sensation und der Trainerwechsel.',
+          'Deine Liga erinnert sich an Serien, an Titelrennen, an „erstmals seit …“ und an runde Jahrestage ihrer Meister und Pokalsieger.',
+          'Spieler machen Schlagzeilen: mit einem Hattrick oder vier Toren, mit dem ersten Pflichtspieltor eines ganz jungen Spielers und mit der Rückkehr nach langer Verletzung. Dazu steht in den News, wer am nächsten Spieltag gesperrt fehlt.',
+          'Ein neuer Trainer stellt am ersten Tag selbst auf, und die Presse meldet, wenn er das System wechselt.',
+          'Gerüchte kommen jetzt aus einem echten Gebot und haben einen Ausgang.',
+          'Bei „Dein Platz im Spiel“ können Gold-Mitglieder jetzt auch „Trainerin“ wählen.',
+          '„Was ist neu“ im Hauptmenü zeigt die Karte „Neu in 1.8 · Die Welt erzählt“ mit sieben Zeilen.',
+        ],
+        besser: [
+          'Am ersten Tag einer neuen Karriere kommt erst der Sponsor, dann das Transferfenster und dann in Ruhe das Postfach. Nichts geht mehr im Hintergrund auf, das habe ich selbst beim Spielen gesehen.',
+          'Ein geladener Spielstand läuft genau so weiter, als hättest du durchgespielt.',
+          'Im Kassenbuch steht unter „Leihen“ jeder Rückruf eines Leihspielers.',
+          'Die Fans klingen in jeder Sprache eigen, geschrieben aus den Wendungen des jeweiligen Landes.',
+          'Über 9.000 neue Fassungen für die Meldungen in sieben Sprachen, dazu Spielberichte je Spiellage mit 1.050 Texten. Derselbe Satz kommt nie zweimal hintereinander.',
+          'In Italienisch, Portugiesisch, Spanisch und Französisch steht vor dem Vereinsnamen der Artikel, wie in der Presse dort. Das waren 4.731 Stellen in den Meldungen und 181 auf den Bildschirmen.',
+          'Dein Co-Trainer sagt vor dem Spiel nur noch, was stimmt. „Die werden tief stehen“ hörst du nur noch gegen einen Gegner, der defensiv eingestellt ist.',
+          'Ab der 3. Liga wechseln mehr Spieler ablösefrei, und Ablösen sind dort seltener. Das gilt auch für die Angebote, die du für deine Spieler bekommst.',
+          'Im Französischen und Englischen steht überall der gebogene Apostroph, und alle Bildschirmtexte in sieben Sprachen wurden gelesen, rund 15.300.',
+          'Am PC und mit großer Schrift werden einzeilige Beschriftungen etwas kleiner, statt mit „…“ abgeschnitten zu werden. In Google Play Games läuft das Spiel wie am Handy, im Hochformat in der Mitte.',
+          'Die Mitgliedschaft ist sichtbarer: Im Hauptmenü steht „Mitglied werden“, und nach dem ersten Spiel der zweiten Saison kommt genau einmal eine Karte dazu, bei der „Nicht jetzt“ gleich groß ist.',
+        ],
+        repariert: [
+          'Die Fans sagen „Und das gegen den Tabellenführer“ nur noch, wenn der Gegner vor dem Spieltag wirklich vorn war, und erst ab dem 5. Spieltag. Vorher hieß nach einer Niederlage am 1. Spieltag der Sieger schon Tabellenführer, das habe ich selbst gefunden. Dasselbe gilt für „aus dem Spitzenfeld“, „aus dem Tabellenkeller“ und die Welt-Meldung „Schlusslicht schlägt Tabellenführer“.',
+          'In der Spielvorbereitung stehen Wappen und Namen wieder auf einer Linie.',
+        ],
+      },
+      en: {
+        neu: [
+          'The news has two tabs. “For you” covers your league and your players, “World” everything else, and each tab shows how much you haven’t read yet.',
+          'The 50 biggest clubs in the world have their own stories: a crisis and how it ends, a long winning run, the champions on the day it’s decided, the drop in the summer, the upset, the change of manager.',
+          'Your league remembers runs, title races, every “first time since …” and milestone anniversaries of its champions and cup winners.',
+          'Players make the headlines with a hat-trick or four goals, a very young player’s first competitive goal or a comeback from a long injury. The news also tells you who is suspended for the next matchday.',
+          'A new manager names his own line-up on day one, and the press reports it when he changes the system.',
+          'Rumours now come from a real bid and they have an outcome.',
+          'With “Your place in the game”, Gold members can now be a female manager too.',
+          '“What’s new” in the main menu shows the card “New in 1.8 · A world of stories”, with seven lines.',
+        ],
+        besser: [
+          'On the first day of a new career you get the sponsor first, then the transfer window, then your inbox in peace. Nothing pops up in the background any more, I noticed that myself while playing.',
+          'A loaded save carries on exactly as if you had played straight through.',
+          'In your books, every recall of a loaned-out player now shows under “Loans”.',
+          'The fans sound like themselves in every language now, written from the way people talk in each country.',
+          'More than 9,000 new versions of the news in seven languages, plus match reports for each way a game can go, 1,050 texts. The same sentence never comes twice in a row.',
+          'In Italian, Portuguese, Spanish and French the club name now takes its article, like in the papers there. That was 4,731 places in the news and 181 on the screens.',
+          'Your assistant only tells you what’s true before a match. You only hear “they’ll sit deep” against a side that’s set up to defend.',
+          'From the third tier down more players move on a free and fees are rarer. That also goes for the offers you get for your own players.',
+          'French and English use the curly apostrophe everywhere now, and all the screen texts in seven languages have been read, about 15,300 of them.',
+          'On PC and with large fonts, one-line labels now shrink a little instead of being cut off with “…”. In Google Play Games the game runs like on your phone, upright in the middle.',
+          'Membership is easier to see. The main menu shows “Become a member”, and after the first match of your second season a card comes up exactly once, with “Not now” just as big.',
+        ],
+        repariert: [
+          'The fans only talk about beating the leaders now when the opponent really was top before the matchday, and only from matchday 5. Before, after losing on matchday 1 the winner was already called the leader, I found that one myself. The same goes for the lines about the top group, the bottom of the table and the world news “bottom side beat leaders”.',
+          'Crests and names in the match preview are back on one line.',
+        ],
+      },
+      hr: {
+        neu: [
+          'Vijesti imaju dvije kartice. „Za tebe“ prati tvoju ligu i tvoje igrače, „Svijet“ sve ostalo, a na svakoj piše koliko još nisi pročitao.',
+          'Pedeset najvećih klubova svijeta ima svoje priče: krizu i njezin kraj, dug niz pobjeda, prvaka na dan odluke, ljetni pad, senzaciju i smjenu trenera.',
+          'Tvoja liga pamti nizove, borbu za naslov, svaki „prvi put nakon …“ i okrugle obljetnice svojih prvaka i osvajača kupa.',
+          'Igrači pune naslovnice hat-trickom ili s četiri gola, prvim službenim golom sasvim mladog igrača i povratkom nakon duge ozljede. U vijestima piše i tko iduće kolo ne igra zbog suspenzije.',
+          'Novi trener već prvog dana sam slaže momčad, a mediji javljaju kad promijeni sustav.',
+          'Glasine sada dolaze iz prave ponude i imaju svoj ishod.',
+          'U „Tvojem mjestu u igri“ članovi Zlata sada mogu odabrati i „Trenericu“.',
+          '„Što je novo“ u glavnom izborniku prikazuje karticu „Novo u verziji 1.8 · Svijet priča“ sa sedam redaka.',
+        ],
+        besser: [
+          'Prvoga dana nove karijere najprije dolazi sponzor, zatim prijelazni rok, a onda u miru pošta. Ništa se više ne otvara u pozadini, to sam i sam primijetio dok sam igrao.',
+          'Učitana karijera nastavlja se točno kao da prekida nije ni bilo.',
+          'U blagajni je svaki prekid posudbe sada zapisan pod „Posudbe“.',
+          'Navijači sada na svakom jeziku zvuče domaće, napisani izrazima te zemlje.',
+          'Više od 9.000 novih inačica vijesti na sedam jezika, a uz to izvještaji za svaki tijek utakmice, 1.050 tekstova. Ista rečenica nikad ne dolazi dvaput zaredom.',
+          'Na talijanskom, portugalskom, španjolskom i francuskom ispred imena kluba sada stoji član, kao u tamošnjem tisku. To je bilo 4.731 mjesto u vijestima i 181 na zaslonima.',
+          'Pomoćni trener prije utakmice govori samo ono što je točno. „Oni će se braniti“ čuješ samo protiv suparnika koji je postavljen obrambeno.',
+          'Od treće lige naniže više igrača prelazi bez odštete, a odštete su rjeđe. To vrijedi i za ponude koje dobivaš za svoje igrače.',
+          'Na francuskom i engleskom posvuda je zaobljeni apostrof, a svi tekstovi na zaslonima na sedam jezika su pročitani, oko 15.300.',
+          'Na računalu i s velikim slovima natpisi u jednom retku malo se smanje umjesto da ih odreže „…“. U Google Play Gamesu igra radi kao na mobitelu, uspravno u sredini.',
+          'Članstvo je vidljivije. U glavnom izborniku piše „Postani član“, a nakon prve utakmice druge sezone točno jednom dolazi kartica na kojoj je odbijanje jednako veliko.',
+        ],
+        repariert: [
+          'Navijači sada spominju vodeću momčad samo ako je suparnik prije kola stvarno bio prvi, i tek od 5. kola. Prije je nakon poraza u 1. kolu pobjednik već bio vodeći, to sam sam pronašao. Isto vrijedi za rečenice o vrhu i dnu tablice te za vijest iz svijeta kad posljednji pobijedi prvoga.',
+          'U pripremi utakmice grbovi i imena opet su u jednoj liniji.',
+        ],
+      },
+    },
+  },
   // 1.7 „Vorstand und Ausbau“ (Regel 55): Stoff Nikola 30.10.2026 + Nachtrag 31.10.2026, 01:5x (Mitgliedschaft, Erinnerung, Weltvergleich, Fehlerbericht, Einstieg; Geld-Kachel E-1112/E-1114).
   {
     version: '1.7', slug: '1-7',
