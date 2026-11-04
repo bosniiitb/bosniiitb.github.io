@@ -70,9 +70,9 @@ export const EINTRAEGE = [
         en: 'of the fan lines are still built the same way across the seven languages, which is just what chance gives you. It used to be 74%, where chance would have been 43%.',
         hr: 'navijačkih rečenica na sedam jezika još je jednako složeno, točno koliko bi dao čisti slučaj. Prije je to bilo 74 %, a slučaj bi dao 43 %.' } },
       { wert: 54, nach: { de: ' bis 59 %', en: ' to 59%', hr: ' do 59 %' }, text: {
-        de: 'der Wechsel ab der 3. Liga laufen jetzt ohne Ablöse. In 1.7 waren es knapp 52 %, in der echten 3. Liga sind es 72 %.',
-        en: 'of moves from the third tier down are now free transfers. In 1.7 it was just under 52%, in Germany’s 3. Liga it’s 72%.',
-        hr: 'prijelaza od treće lige naniže sada ide bez odštete. U 1.7 bilo je nešto manje od 52 %, a u pravoj njemačkoj 3. ligi 72 %.' } },
+        de: 'der festen Neuzugänge ab der 3. Liga kommen jetzt ohne Ablöse. In 1.7 waren es knapp 52 %, in der echten 3. Liga sind es 72 %.',
+        en: 'of permanent signings from the third tier down are now free transfers. In 1.7 it was just under 52%, in Germany’s 3. Liga it’s 72%.',
+        hr: 'novih igrača od treće lige naniže, ne računajući posudbe, sada stiže bez odštete. U 1.7 bilo je nešto manje od 52 %, a u pravoj njemačkoj 3. ligi 72 %.' } },
       { wert: 464, text: {
         de: 'Prüfer liefen in der letzten großen Runde vor dem Paket, 460 waren im ersten Durchgang grün. Drei lagen nur an der Zeit unter Volllast, einer hatte selbst falsch gezählt. Fünf Saisons haben wir zweimal gespielt, und beide Male kam Saison für Saison genau dasselbe raus.',
         en: 'checks ran in the last big round before the build, and 460 were green first time. Three only ran out of time under full load, and one had miscounted by itself. We played five seasons twice, and both came out exactly the same, season by season.',
