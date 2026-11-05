@@ -86,6 +86,35 @@ export const EINTRAEGE = [
         hr: 'Najneugodnije je bilo ovo: karijera se nakon učitavanja nastavljala malo drukčije nego bez prekida. Igra je dvije stvari zapamtila pri prvom čitanju, umjesto da ih ponovno pogleda. To je uhvatila nova provjera koja oba puta vozi usporedno. Zatim vijesti: s prvim postavkama zatrpale bi te, a tek smo na slici sa stvarnim primjerima vidjeli gdje je previše. Veliku rundu provjera vozili smo tri puta. U prvoj je jedna bila crvena jer je u malim ligama premalo igrača prelazilo bez odštete, 48 %, a u stvarnosti 72 %. To nije došlo s 1.8, stajalo je na rubu još od 1.7, ali htio sam da se popravi odmah. Popravak je onda za dlaku srušio dvije druge provjere. Nakon velike prodaje rjeđe je dolazio mladi nasljednik, a nemirni klubovi ljeti više nisu kupovali više od mirnih. Zato smo u istim svjetovima izmjerili četiri stupnja i srednji je odgovarao svima trima. Kod navijačkih rečenica jezici su se dvaput opet počeli zrcaliti, pa smo ih napisali iznova. A zaobljeni apostrof: računali smo s oko 300 mjesta, bilo ih je 2.256.',
       },
     },
+    ausblick: {
+      titel: { de: 'Wie es weitergeht', en: 'What comes next', hr: 'Što slijedi' },
+      text: {
+        de: [
+          'In den letzten Wochen kam fast jede Woche ein Update. Das nächste große dauert länger, das sage ich lieber gleich. Wir arbeiten an etwas Riesigem: Du sollst deine Spiele in 2D sehen, alle 22 Spieler auf dem Platz, jeden Pass, jeden Laufweg.',
+          'Die Bilder hier stammen aus einem frühen Prototyp. Das ist noch nicht das Spiel und noch nicht der neue Spielmotor, sie zeigen nur, wo wir hinwollen.',
+          'Es ist schwerer, als es aussieht. Auf dem Platz sieht man alles. Im Prototyp lief ein Stürmer allein aufs Tor zu und hat dann nach hinten gepasst. Bei Ecken blieb der Ball mitten im Feld liegen, und die Ecke kam aus dem Nichts. Das fällt sofort auf, und jede dieser Sachen muss weg. Am Ende muss das alles am Handy laufen, offline, und die Bildschirme sollen ruhig und einfach bleiben.',
+          'Wir wollen die höchste Genauigkeit und das beste Spielgefühl erreichen, das wir hinbekommen. Einen Termin gibt es dafür noch nicht. Bis dahin beheben kleinere Updates Fehler, wenn sie auftauchen, jede Meldung bleibt auf der Liste, und ich halte dich hier auf dem Laufenden.',
+        ],
+        en: [
+          'For the last few weeks an update came almost every week. The next big one will take longer, and I’d rather say that now. We’re working on something huge: you’ll see your matches in 2D, all 22 players on the pitch, every pass, every run.',
+          'The pictures here come from an early prototype. It isn’t the game and it isn’t the new match engine yet, they only show where we want to go.',
+          'It’s harder than it looks. On a pitch you see everything. In the prototype a striker ran clear at the keeper and then passed it backwards. At corners the ball stayed in the middle of the pitch and the corner came out of nowhere. Things like that stand out right away and every one of them has to go. In the end all of it has to run on your phone, offline, and the screens have to stay calm and simple.',
+          'We want the highest precision and the best feel for the game that we can reach. There’s no date for it yet. Until then, smaller updates fix bugs as they turn up, every report stays on the list, and I’ll keep you up to date here.',
+        ],
+        hr: [
+          'Zadnjih je tjedana gotovo svaki tjedan stizalo ažuriranje. Sljedeće veliko trajat će dulje, i to radije odmah kažem. Radimo na nečemu ogromnom: svoje ćeš utakmice gledati u 2D, svih 22 igrača na terenu, svako dodavanje, svako kretanje.',
+          'Slike ovdje dolaze iz ranog prototipa. To još nije igra ni novi motor utakmice, samo pokazuju kamo želimo stići.',
+          'Teže je nego što izgleda. Na terenu se vidi sve. U prototipu je napadač sam krenuo prema golu i onda dodao unatrag. Kod kornera je lopta ostala nasred terena, a korner je došao niotkuda. To se odmah vidi i svaka takva stvar mora otići. Na kraju sve to mora raditi na mobitelu, bez interneta, a ekrani moraju ostati mirni i jednostavni.',
+          'Želimo najveću preciznost i najbolji osjećaj igre koji možemo postići. Datuma za to još nema. Do tada manja ažuriranja popravljaju greške kad se pojave, svaka prijava ostaje na popisu, a ja te ovdje redovito obavještavam.',
+        ],
+      },
+      bilder: [2, 3, 4, 5, 6],
+      alt: {
+        de: ['Ein Moment aus einem Spiel im Prototyp', 'Die Wege aller Spieler in einem Angriff', 'Der Prototyp gemessen am echten Fußball', 'Was bisher schiefging', 'Wo wir stehen'],
+        en: ['One moment of a match in the prototype', 'The paths of all players in one attack', 'The prototype measured against real football', 'What went wrong so far', 'Where we stand'],
+        hr: ['Jedan trenutak utakmice u prototipu', 'Putanje svih igrača u jednom napadu', 'Prototip izmjeren prema pravom nogometu', 'Što je dosad pošlo po zlu', 'Gdje smo'],
+      },
+    },
     aenderungen: {
       de: {
         neu: [

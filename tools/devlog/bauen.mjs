@@ -56,6 +56,7 @@ const CSS = `.eintrag{background:var(--surface);border:1px solid var(--line);bor
 details{background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:12px 14px}summary{cursor:pointer;font-weight:700;color:var(--gold)}
 .gruppe{margin-top:12px}.gruppe b{display:block;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--leise);margin-bottom:6px}
 .fuss-eintrag{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:15px}
+.ausblick{display:grid;gap:10px}.ausblick h3{margin:0;font-size:20px}.ausblick p{margin:0;max-width:66ch}.galerie{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 0 10px;-webkit-overflow-scrolling:touch}.galerie img{flex:none;width:min(320px,78vw);height:auto;border-radius:10px;border:1px solid var(--line);scroll-snap-align:start}
 .bitte{margin:0;font-size:16px}.bitte a{color:var(--gold)}
 .frueher{display:flex;flex-wrap:wrap;gap:8px}.frueher span{font-size:14px;color:var(--leise);border:1px solid var(--line);border-radius:999px;padding:4px 10px}`;
 
@@ -85,6 +86,7 @@ function eintragHtml(e, s, eigeneSeite) {
 <section><div class="k">${esc(t.blick)}</div><ul class="blick" style="margin-top:8px">${blick}</ul></section>
 ${zahlen ? `<section><div class="k">${esc(t.zahlen)}</div><div class="zahlen" data-gruppe>${zahlen}</div></section>` : ''}
 ${e.hindernis ? `<section class="hindernis"><div class="k">${esc(t.hindernis)}</div><h3>${esc(e.hindernis.titel[s])}</h3><p>${esc(e.hindernis.text[s])}</p></section>` : ''}
+${e.ausblick ? `<section class="ausblick"><h3>${esc(e.ausblick.titel[s])}</h3>${e.ausblick.text[s].map((x) => `<p>${esc(x)}</p>`).join('')}<div class="galerie">${e.ausblick.bilder.map((n, i) => `<img src="/img/devlog/1-8/${s}-${n}.webp" width="1080" height="1350" loading="lazy" alt="${esc(e.ausblick.alt[s][i])}">`).join('')}</div></section>` : ''}
 <details><summary>${esc(t.alle)} ${esc(e.version)}</summary>${gruppe(t.neu, a.neu)}${gruppe(t.besser, a.besser)}${gruppe(t.repariert, a.repariert)}</details>
 ${fuss}
 </div></article>`;
