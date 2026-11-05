@@ -110,9 +110,9 @@ export const EINTRAEGE = [
       },
       bilder: [2, 3, 4, 5, 6],
       alt: {
-        de: ['Ein Moment aus einem Spiel im Prototyp', 'Die Wege aller Spieler in einem Angriff', 'Der Prototyp gemessen am echten Fußball', 'Was bisher schiefging', 'Wo wir stehen'],
-        en: ['One moment of a match in the prototype', 'The paths of all players in one attack', 'The prototype measured against real football', 'What went wrong so far', 'Where we stand'],
-        hr: ['Jedan trenutak utakmice u prototipu', 'Putanje svih igrača u jednom napadu', 'Prototip izmjeren prema pravom nogometu', 'Što je dosad pošlo po zlu', 'Gdje smo'],
+        de: ['Ein Moment aus einem Spiel im Prototyp', 'Die Wege aller Spieler in einem Angriff', 'Der Prototyp gemessen an unserem Ziel', 'Was bisher schiefging', 'Wo wir stehen'],
+        en: ['One moment of a match in the prototype', 'The paths of all players in one attack', 'The prototype measured against our target', 'What went wrong so far', 'Where we stand'],
+        hr: ['Jedan trenutak utakmice u prototipu', 'Putanje svih igrača u jednom napadu', 'Prototip izmjeren prema našem cilju', 'Što je dosad pošlo po zlu', 'Gdje smo'],
       },
     },
     aenderungen: {

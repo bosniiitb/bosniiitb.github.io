@@ -56,7 +56,7 @@ const CSS = `.eintrag{background:var(--surface);border:1px solid var(--line);bor
 details{background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:12px 14px}summary{cursor:pointer;font-weight:700;color:var(--gold)}
 .gruppe{margin-top:12px}.gruppe b{display:block;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--leise);margin-bottom:6px}
 .fuss-eintrag{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:15px}
-.ausblick{display:grid;gap:10px}.ausblick h3{margin:0;font-size:20px}.ausblick p{margin:0;max-width:66ch}.galerie{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 0 10px;-webkit-overflow-scrolling:touch}.galerie img{flex:none;width:min(320px,78vw);height:auto;border-radius:10px;border:1px solid var(--line);scroll-snap-align:start}
+.ausblick{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;min-width:0}.ausblick h3{margin:0;font-size:20px}.ausblick p{margin:0;max-width:66ch}.galerie{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 0 10px;-webkit-overflow-scrolling:touch}.galerie img{flex:none;width:min(320px,78vw);height:auto;border-radius:10px;border:1px solid var(--line);scroll-snap-align:start}
 .bitte{margin:0;font-size:16px}.bitte a{color:var(--gold)}
 .frueher{display:flex;flex-wrap:wrap;gap:8px}.frueher span{font-size:14px;color:var(--leise);border:1px solid var(--line);border-radius:999px;padding:4px 10px}`;
 
