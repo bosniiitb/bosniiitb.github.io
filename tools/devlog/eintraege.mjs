@@ -24,6 +24,7 @@ export const EINTRAEGE = [
         'Die Tage laufen schneller, der Saisonwechsel ist mehr als doppelt so schnell.',
         'Klare Ansage vom Vorstand: das Saisonziel mit Wettbewerb und Plätzen. Kein Finanzziel mehr, alle Briefe neu.',
         'Jeder Spieler fordert Rolle, Laufzeit und Gehalt. Ob dein Angebot passt, sagt erst seine Antwort mit Grund.',
+        'Im Live-Spiel hörst du das Stadion, im Büro leise Klicks; drei Regler unter Einstellungen → Audio.',
       ],
       en: [
         'Give every player his own individual work: one attribute or a new position.',
@@ -33,6 +34,7 @@ export const EINTRAEGE = [
         'The days run faster, and the end of the season takes less than half the time.',
         'A clear target from the board: the competition and the places. No more financial target, and all-new letters.',
         'His demands: role, contract length, wages. Only his answer, with a reason, tells you if your offer fits.',
+        'Play a match live and you hear the crowd; the office gets soft clicks. Three sliders under Settings → Audio.',
       ],
       hr: [
         'Svaki igrač dobiva individualni rad: jednu vrijednost ili novu poziciju.',
@@ -42,6 +44,7 @@ export const EINTRAEGE = [
         'Dani prolaze brže, a prelazak u novu sezonu traje upola kraće.',
         'Uprava jasno kaže cilj sezone: natjecanje i plasman. Financijskog cilja više nema, a pisma su nova.',
         'Njegovi zahtjevi: uloga, trajanje ugovora, plaća. Tek odgovor s razlogom kaže odgovara li tvoja ponuda.',
+        'Uživo čuješ stadion, a u uredu tihe klikove. Glasnoću namještaš s tri klizača: Postavke → Audio.',
       ],
     },
     zahlen: [
