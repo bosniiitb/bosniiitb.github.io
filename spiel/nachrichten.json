@@ -1,4 +1,39 @@
 {
   "neueste": "1.9.0",
-  "nachrichten": []
+  "nachrichten": [
+    {
+      "id": "2026-11-15-pause-feiertage",
+      "ab": "1.9.0",
+      "gueltigBis": "2027-01-06",
+      "store": false,
+      "de": {
+        "titel": "Pause bis ins neue Jahr",
+        "text": "1.9 ist das letzte Update in diesem Jahr. Im neuen Jahr geht es weiter mit dem großen Schritt: neuer Spielmotor und 2D."
+      },
+      "en": {
+        "titel": "A break until the new year",
+        "text": "1.9 is our last update this year. In the new year we carry on with the big step: a new match engine and 2D."
+      },
+      "hr": {
+        "titel": "Pauza do nove godine",
+        "text": "1.9 je zadnje ažuriranje ove godine. U novoj godini nastavljamo velikim korakom: novi motor utakmice i 2D."
+      },
+      "es": {
+        "titel": "Pausa hasta el año nuevo",
+        "text": "La 1.9 es la última actualización del año. En el año nuevo sigue el gran paso: nuevo motor de partidos y 2D."
+      },
+      "pt": {
+        "titel": "Pausa até o ano novo",
+        "text": "A 1.9 é a última atualização do ano. No ano novo vem o grande passo: um novo motor de partidas e o 2D."
+      },
+      "it": {
+        "titel": "Pausa fino al nuovo anno",
+        "text": "La 1.9 è l'ultimo aggiornamento dell'anno. Nel nuovo anno arriva il grande passo: nuovo motore partita e 2D."
+      },
+      "fr": {
+        "titel": "Pause jusqu’à la nouvelle année",
+        "text": "La 1.9 est la dernière mise à jour de l’année. En 2027, place au grand saut avec un nouveau moteur de match et la 2D."
+      }
+    }
+  ]
 }

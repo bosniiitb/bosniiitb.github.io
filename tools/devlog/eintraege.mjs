@@ -88,15 +88,15 @@ export const EINTRAEGE = [
       text: {
         de: [
           'Als Nächstes kommt der große Schritt: ein neuer Spielmotor, und du siehst deine Spiele in 2D. Das wird unser größtes Update und dauert länger als die davor, einen Termin gibt es noch nicht.',
-          'Bis dahin beheben kleinere Updates Fehler, wenn sie auftauchen, jede Meldung bleibt auf der Liste, und ich halte dich hier auf dem Laufenden.',
+          'Vorher machen wir Pause: 1.9 ist das letzte Update in diesem Jahr, über die Feiertage ruhen die Updates, und im neuen Jahr geht es mit dem großen Schritt weiter. Geht in der Zeit etwas Wichtiges kaputt, reparieren wir es trotzdem, jede Meldung bleibt auf der Liste, und ich halte dich hier auf dem Laufenden.',
         ],
         en: [
           'Next comes the big step: a new match engine, and you get to see your matches in 2D. It will be our biggest update and it takes longer than the ones before, so there’s no date yet.',
-          'Until then, smaller updates fix bugs as they turn up, every report stays on the list, and I’ll keep you up to date here.',
+          'First we take a break: 1.9 is the last update this year, updates rest over the holidays, and in the new year we carry on with the big step. If something important breaks in the meantime, we still fix it, every report stays on the list, and I’ll keep you up to date here.',
         ],
         hr: [
           'Sljedeći je veliki korak: novi motor utakmice, a svoje utakmice gledaš u 2D. Bit će to naše najveće ažuriranje i traje dulje od prethodnih, pa datuma još nema.',
-          'Do tada manja ažuriranja popravljaju greške kad se pojave, svaka prijava ostaje na popisu, a ja te ovdje redovito obavještavam.',
+          'Prije toga radimo pauzu: 1.9 je zadnje ažuriranje ove godine, preko blagdana ažuriranja miruju, a u novoj godini nastavljamo velikim korakom. Ako se u međuvremenu pokvari nešto važno, svejedno to popravljamo, svaka prijava ostaje na popisu, a ja te ovdje redovito obavještavam.',
         ],
       },
     },
