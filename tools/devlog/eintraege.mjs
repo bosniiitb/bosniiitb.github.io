@@ -5,6 +5,203 @@
 // zahlen: { wert, nach?, komma?, text } — „wert“ zählt beim Sichtbarwerden hoch; nur gemessene oder belegte Zahlen.
 
 export const EINTRAEGE = [
+  // 1.9 „Zwischen den Spielen“ (Regel 55): Stoff Ivan 07.–14.11.2026 (Mappe v1.9), Text Luka 15.11.2026; Quelle docs/announcements/v1.9/tagebuch-1-9.mjs.
+  {
+    version: '1.9', slug: '1-9',
+    datum: { de: 'November 2026', en: 'November 2026', hr: 'studeni 2026.' },
+    name: { de: 'Zwischen den Spielen', en: 'Between matches', hr: 'Između utakmica' },
+    kurz: {
+      de: 'Diesmal geht es um die Woche zwischen den Spielen. Jeder Spieler bekommt sein eigenes Training, und wer neu ist, braucht erst mal Zeit. Spieler sagen dir jetzt, was sie wollen, und du verhandelst mit ihnen. Arzt und Akademieleiter sind echte Personen, gescoutet wird auf der Europakarte, und im Live-Spiel redet jetzt ein Kommentator.',
+      en: 'This one is about the week between matches. Every player gets his own training, and new signings need some time first. Players now tell you what they want and you negotiate with them. Your doctor and academy manager are real people, scouting happens on a map of Europe, and there’s a commentator in the live match now.',
+      hr: 'Ovaj put sve se vrti oko tjedna između utakmica. Svaki igrač dobiva svoj individualni rad, a pojačanjima prvo treba malo vremena. Igrači ti sada kažu što žele, a ti s njima pregovaraš. Liječnik i voditelj akademije prave su osobe, skauting ide preko karte Europe, a utakmicu uživo sada prati komentator.',
+    },
+    blick: {
+      de: [
+        'Jeder Spieler bekommt sein eigenes Training: ein Wert oder eine neue Position.',
+        'Neuzugänge brauchen Zeit: Wer neu ist, muss erst ankommen, und das siehst du im Spiel.',
+        'Mannschaftsarzt und Akademieleiter sind jetzt Personen: mit Gehalt, Bewerbern und Angeboten anderer Vereine.',
+        'Scouting auf der Europakarte: Nah ist, was an dein Land grenzt.',
+        'Die Tage laufen schneller, der Saisonwechsel ist mehr als doppelt so schnell.',
+        'Klare Ansage vom Vorstand: das Saisonziel mit Wettbewerb und Plätzen. Kein Finanzziel mehr, alle Briefe neu.',
+        'Jeder Spieler fordert Rolle, Laufzeit und Gehalt. Ob dein Angebot passt, sagt erst seine Antwort mit Grund.',
+      ],
+      en: [
+        'Give every player his own individual work: one attribute or a new position.',
+        'New signings need time to settle in, and you will see it on the pitch.',
+        'Your club doctor and academy manager are real people now, with wages, applicants and offers from rival clubs.',
+        'Scouting on the map of Europe: close means a country bordering yours.',
+        'The days run faster, and the end of the season takes less than half the time.',
+        'A clear target from the board: the competition and the places. No more financial target, and all-new letters.',
+        'His demands: role, contract length, wages. Only his answer, with a reason, tells you if your offer fits.',
+      ],
+      hr: [
+        'Svaki igrač dobiva individualni rad: jednu vrijednost ili novu poziciju.',
+        'Pojačanjima treba vremena da se uklope, a to se vidi i na terenu.',
+        'Klupski liječnik i voditelj akademije sada su osobe: s plaćom, kandidatima i ponudama drugih klubova.',
+        'Skauting na karti Europe: blizu je ono što graniči s tvojom zemljom.',
+        'Dani prolaze brže, a prelazak u novu sezonu traje upola kraće.',
+        'Uprava jasno kaže cilj sezone: natjecanje i plasman. Financijskog cilja više nema, a pisma su nova.',
+        'Njegovi zahtjevi: uloga, trajanje ugovora, plaća. Tek odgovor s razlogom kaže odgovara li tvoja ponuda.',
+      ],
+    },
+    zahlen: [
+      { wert: 33, nach: { de: ' statt 82 Sekunden', en: ' instead of 82 seconds', hr: ' umjesto 82 sekunde' }, text: {
+        de: 'dauert der Saisonwechsel jetzt, gemessen am Emulator, nicht am Handy. Gebremst hatte ihn seit 1.7 die Wahl des Spielers der Saison, und das hatte keiner gemerkt.',
+        en: 'is how long the end of the season takes now, measured on the emulator, not on a phone. Since 1.7 the player of the season vote had been slowing it down and nobody noticed.',
+        hr: 'sada traje prelazak u novu sezonu, mjereno na emulatoru, ne na mobitelu. Od verzije 1.7 kočio ga je izbor igrača sezone, a to nitko nije primijetio.' } },
+      { wert: 9.9, komma: 1, nach: { de: ' statt 13,8 Sekunden', en: ' instead of 13.8 seconds', hr: ' umjesto 13,8 sekundi' }, text: {
+        de: 'braucht die Welt am Emulator, wenn du ein neues Spiel startest. Die Startwelt ist trotzdem genau dieselbe geblieben, Spieler für Spieler.',
+        en: 'is what the world takes on the emulator when you start a new game. The starting world is still exactly the same, player for player.',
+        hr: 'treba svijetu na emulatoru kad pokreneš novu igru. Početni svijet ipak je ostao potpuno isti, igrač po igrač.' } },
+      { wert: 636, text: {
+        de: 'Spieler wollten in unserer Testwelt weg, weil man ihnen eine Rolle versprochen und sie dann nicht gegeben hat. 280 wurden im Sommer verkauft, 107 gingen ablösefrei, 249 sind geblieben.',
+        en: 'players wanted out in our test world because they were promised a role and then didn’t get it. 280 were sold in the summer, 107 left on a free and 249 stayed.',
+        hr: 'igrača u našem testnom svijetu htjelo je otići jer im je obećana uloga koju na kraju nisu dobili. Ljeti je prodano 280, 107 ih je otišlo bez odštete, a 249 ih je ostalo.' } },
+      { wert: 126, text: {
+        de: 'Sätze hat dein Co-Trainer in jeder Sprache neu bekommen, in Fußballsprache und in sieben Sprachen. Sein Handbuch hat jetzt 20 Seiten statt 11, und jede Funktion im Spiel hat bei ihm ihren Platz.',
+        en: 'lines are new for your assistant in every language, written the way football people talk, in seven languages. His handbook has 20 pages now instead of 11, and every feature in the game has its place there.',
+        hr: 'rečenica tvoj pomoćni trener ima iznova na svakom jeziku, nogometnim jezikom i na sedam jezika. Njegov priručnik sada ima 20 stranica umjesto 11, a svaka funkcija u igri tamo ima svoje mjesto.' } },
+      { wert: 22, text: {
+        de: 'Arten von Vorstandsbriefen sind neu geschrieben, 270 Stellen in sieben Sprachen, nach echten Vereinsmitteilungen aus jedem Land.',
+        en: 'kinds of board letters are rewritten, 270 places in seven languages, based on real club statements from each country.',
+        hr: 'vrsta pisama uprave napisano je iznova, 270 mjesta na sedam jezika, prema pravim priopćenjima klubova iz svake zemlje.' } },
+      { wert: 1228, text: {
+        de: 'Texte haben den langen Gedankenstrich verloren, in allen sieben Sprachen. Dazu habe ich das ganze Deutsch gelesen, 127 Sätze sind neu.',
+        en: 'texts lost the long dash, in all seven languages. I also read all the German myself, 127 lines are new.',
+        hr: 'tekstova izgubilo je dugu crtu, na svih sedam jezika. Uz to sam sam pročitao cijeli njemački, 127 rečenica je novo.' } },
+      { wert: 181, text: {
+        de: 'Stellen mit zu kleiner Schrift sind größer geworden. Nichts ist jetzt kleiner als Größe 11, und gelesene Meldungen sind deutlich heller.',
+        en: 'places with text that was too small got bigger. Nothing is smaller than size 11 now, and read messages are a lot brighter.',
+        hr: 'mjesta s premalim slovima sada je veće. Ništa više nije manje od veličine 11, a pročitane poruke su puno svjetlije.' } },
+    ],
+    hindernis: {
+      titel: { de: 'CB ist doch CB, oder?', en: 'A centre-back is a centre-back, right?', hr: 'Stoper je stoper, zar ne?' },
+      text: {
+        de: 'Angefangen hat es in meinem eigenen Spiel. Ich habe im Live-Spiel meine zwei Innenverteidiger getauscht, und beide Zahlen wurden rot. In Wahrheit stand der Linksverteidiger im Bild auf dem Platz eines Innenverteidigers. Die automatische Aufstellung hatte am Ende die Positionen getauscht, aber nicht die Plätze im Bild. Die rote Zahl war also richtig, falsch war das Bild davor. Beim Nachzählen kamen dann sieben Wege raus, auf denen ein Spieler im Bild woanders stand, als er gespielt hat. Der letzte war der Ersatz vor dem Spiel, und daraus ist eine neue Regel geworden: der Ersatz spielt jetzt die Position von dem, der ausfällt. Dann der Saisonwechsel. Der war seit 1.7 langsamer geworden, und keiner wusste warum, bis wir gemessen haben: es war die Wahl des Spielers der Saison. Und beim Neuschreiben der Vorstandsbriefe ist in drei von fünf Glückwünschen zum Pokalsieg der Vereinsname weggefallen. Ein Prüfer hat das gefunden, bevor es einer von euch lesen musste, jetzt nennt jede Fassung in jeder Sprache den Verein.',
+        en: 'It started in my own game. In a live match I swapped my two centre-backs and both numbers went red. What was really going on: the left-back was standing on a centre-back’s spot in the picture. The automatic line-up had swapped the positions at the very end, but not the spots in the picture. So the red number was right, the picture before it was wrong. When we counted it all up, there were seven ways a player could stand somewhere else in the picture than where he actually played. The last one was the replacement before the match, and that turned into a new rule: the replacement now plays the position of the one who drops out. Then the end of the season. It had been getting slower since 1.7 and nobody knew why, until we measured it: it was the player of the season vote. And when we rewrote the board letters, the club name went missing in three of five letters congratulating you on a cup win. A check caught it before any of you had to read it, and now every version in every language names the club.',
+        hr: 'Počelo je u mojoj vlastitoj igri. U utakmici uživo zamijenio sam svoja dva stopera i oba broja su postala crvena. Zapravo je lijevi bek na slici stajao na mjestu stopera. Automatska postava je na kraju zamijenila pozicije, ali ne i mjesta na slici. Crveni broj je dakle bio točan, kriva je bila slika prije toga. Kad smo sve prebrojali, ispalo je sedam načina na koje je igrač na slici stajao negdje drugdje nego što je igrao. Zadnji je bila zamjena prije utakmice, i od toga je nastalo novo pravilo: zamjena sada igra poziciju onoga koji ispadne. Onda prelazak u novu sezonu. Od verzije 1.7 postao je sporiji i nitko nije znao zašto, dok nismo izmjerili: bio je to izbor igrača sezone. A kad smo iznova pisali pisma uprave, u tri od pet čestitki za osvajanje kupa nestalo je ime kluba. To je uhvatila provjera prije nego što je itko od vas morao to čitati, a sada svaka inačica na svakom jeziku spominje klub.',
+      },
+    },
+    ausblick: {
+      titel: { de: 'Wie es weitergeht', en: 'What comes next', hr: 'Što slijedi' },
+      // Wortlaut wie der Fahrplan der Webseite („Der große Schritt“, öffentlich seit 06.11.2026, E-1303/1), kein Termin. Fabian liest vorher.
+      text: {
+        de: [
+          'Als Nächstes kommt der große Schritt: ein neuer Spielmotor, und du siehst deine Spiele in 2D. Das wird unser größtes Update und dauert länger als die davor, einen Termin gibt es noch nicht.',
+          'Bis dahin beheben kleinere Updates Fehler, wenn sie auftauchen, jede Meldung bleibt auf der Liste, und ich halte dich hier auf dem Laufenden.',
+        ],
+        en: [
+          'Next comes the big step: a new match engine, and you get to see your matches in 2D. It will be our biggest update and it takes longer than the ones before, so there’s no date yet.',
+          'Until then, smaller updates fix bugs as they turn up, every report stays on the list, and I’ll keep you up to date here.',
+        ],
+        hr: [
+          'Sljedeći je veliki korak: novi motor utakmice, a svoje utakmice gledaš u 2D. Bit će to naše najveće ažuriranje i traje dulje od prethodnih, pa datuma još nema.',
+          'Do tada manja ažuriranja popravljaju greške kad se pojave, svaka prijava ostaje na popisu, a ja te ovdje redovito obavještavam.',
+        ],
+      },
+    },
+    aenderungen: {
+      de: {
+        neu: [
+          'Einzeltraining: Unter Team, Training tippst du einen Spieler an und gibst ihm ein eigenes Ziel, einen Wert oder eine neue Position. Goldene Pfeile an seinen Werten zeigen, was das Training gerade hebt und wie schnell, und ein Tipp auf einen Wert legt die Sonderschicht dorthin.',
+          'Umschulen hat vier Stufen: fremd, gewöhnt sich ein, solide, gelernt. Kommt er eine Stufe weiter, schreibt dir der Co-Trainer, mit einem Knopf direkt ins Training.',
+          'Die Schwerpunkte im Training zeigen die Übung als Bild, mit zwölf Zeichnungen.',
+          'Neuzugänge brauchen Zeit: Ein zweiter, weißer Balken zeigt, wie weit einer schon angekommen ist. Aus dem eigenen Land dauert das etwa acht Wochen, aus dem Ausland etwa ein halbes Jahr.',
+          'Seine Forderungen: Jeder Spieler sagt, welche Rolle, welche Laufzeit und welches Gehalt er will. Mit Scout steht das auf seiner Karte, ohne Scout nur ungefähr oder erst in seiner Antwort.',
+          'Im Vertragsblatt stellst du Rolle, Laufzeit und Gehalt selbst ein und pokerst. Ob dein Angebot passt, steht nicht darunter, das zeigt erst seine Antwort, mit Grund. Das gilt auch beim Verlängern.',
+          'Der Junge will spielen, der Ältere will Sicherheit, der Starke will Geld und eine Rolle, die zu ihm passt. Passen Liga oder Verein nicht, hat er kein Interesse. Brichst du ein Versprechen zur Rolle, schreibt er dir erst ins Postfach, dann will er weg. Die Computer-Vereine verhandeln genauso.',
+          'Vertragslose fordern ihr Gehalt nach dem, was man über sie weiß, nicht nach ihrer echten Stärke. Blind verpflichten kann danebengehen, dein Scout sagt es dir vorher.',
+          'Mannschaftsarzt und Akademieleiter sind Personen, mit Gehalt und Charakter. Du suchst sie aus Bewerbern aus, und will ein anderer Verein einen von ihnen haben, bekommst du einen Brief.',
+          'Scouting auf der Europakarte: Nah ist, was an dein Land grenzt. Mit Plus und Minus zoomst du hinein und heraus.',
+          'Der Vorstand nennt dein Saisonziel mit Wettbewerb und Plätzen. Ein Finanzziel gibt es nicht mehr, und alle Vorstandsbriefe sind neu geschrieben.',
+          'Im Live-Spiel spricht ein Kommentator: zehn Arten von Toren, vom gedrehten Spiel bis zum Ehrentreffer, dazu Karten und Wechsel als Satz und die Halbzeit als Zeile. Nach dem Simulieren kommt ein Rückblick.',
+          'Wer eine Saison zu den Besten seiner Liga gehört, dessen Spanne beim Potenzial rückt am Saisonwechsel nach oben, bei Jungen mehr als bei Älteren. Die Weltklasse bleibt trotzdem selten.',
+          'Die Einstellungen sind die vierte Zeile unten im Hauptmenü, mit Sprache, Ton und Cloud-Speicher.',
+        ],
+        besser: [
+          'Die Tage laufen schneller. Der Saisonwechsel braucht weniger als die Hälfte der Zeit, und der erste Tag im Transferfenster ist schneller.',
+          'Die Welt entsteht schneller, wenn du ein neues Spiel beginnst, und es ist dieselbe Startwelt wie vorher.',
+          'Aufstellung auf dem echten Platz: Jeder steht im Bild dort, wo er spielt. Fällt vor dem Spiel ein Stammspieler aus, steht sein Ersatz auf seinem Platz und spielt seine Position, und der Ersatztorwart bleibt im Tor.',
+          'Der Co-Trainer spricht neu, und er kennt das ganze Spiel. Im Postfach schreibt er mit du und wir, die News sind neutral wie eine Agentur, und die Fans sagen wir.',
+          'Der Transfermarkt öffnet gemischt, mit Spielern aus aller Welt, und du kannst nach Alter sortieren. In Listen steht keine Einschätzung mehr, das Urteil steht im Bericht deines Scouts.',
+          'Neues Spiel: Die Vorschau auf deinen Kader und das Fenster mit dem Sponsor sind neu.',
+          'Gelesene Meldungen sind deutlich heller, keine Schrift ist kleiner als Größe 11, und lange Texte schrumpfen auf Android nicht mehr ins Unlesbare.',
+          'Die Computer-Vereine finden ihre Talente schneller.',
+          'Der lange Gedankenstrich ist aus allen Texten raus. Das Deutsch habe ich ganz gelesen, und die kurzen Fan-Rufe sind Satz für Satz durchgesehen.',
+        ],
+        repariert: [
+          'Das Heim-Testspiel kennt nach Auf- und Abstieg die neue Liga.',
+          'Die Vertragsverlängerungen am Saisonwechsel rechnen mit dem Umsatz der neuen Saison.',
+        ],
+      },
+      en: {
+        neu: [
+          'Individual training: under Team, Training you tap a player and give him his own target, one attribute or a new position. Gold arrows on his attributes show what training is lifting right now and how fast, and a tap on an attribute puts the extra session there.',
+          'Retraining has four stages: out of position, getting used to it, solid, natural. When he moves up a stage your assistant writes to you, with a button that takes you straight to training.',
+          'The training focuses show the drill as a picture, twelve drawings in all.',
+          'New signings need time: a second, white bar shows how far a new player has settled in. From your own country it takes about eight weeks, from abroad about half a year.',
+          'His demands: every player tells you the role, the contract length and the wage he wants. With a scout it’s on his card, without one you only get a rough idea or you find out in his answer.',
+          'In the contract sheet you set the role, the length and the wage yourself and you play poker. Nothing under your offer tells you if it’s good enough, only his answer does, with a reason. Same when you extend a contract.',
+          'The young ones want to play, the older ones want security, the good ones want money and a role that fits. If the league or the club doesn’t suit him, he’s not interested. Break a promise about his role and he writes to your inbox first, then he wants out. The computer clubs negotiate the same way.',
+          'Free agents ask for a wage based on what people know about them, not on how good they really are. Signing one blind can go wrong, your scout tells you before.',
+          'Your club doctor and academy manager are people, with wages and a character. You pick them from applicants, and if another club wants one of them you get a letter.',
+          'Scouting on the map of Europe: close means a country bordering yours. Zoom in and out with plus and minus.',
+          'The board names your season target with the competition and the places. There’s no financial target any more, and every board letter has been rewritten.',
+          'There’s a commentator in the live match: ten kinds of goals, from turning the game around to a late consolation, plus cards and subs as a sentence and half-time as a line. After you simulate, you get a look back at the match.',
+          'If a player is one of the best in his league over a season, his potential range moves up at the end of the season, more for young players than for older ones. World class still stays rare.',
+          'Settings are the fourth line at the bottom of the main menu, with language, sound and cloud saves.',
+        ],
+        besser: [
+          'The days run faster. The end of the season takes less than half the time, and the first day of the transfer window is quicker.',
+          'The world is built faster when you start a new game, and it’s the same starting world as before.',
+          'Line-ups on the real pitch: everyone stands in the picture where he plays. If a regular drops out before the match, his replacement takes his spot and plays his position, and the backup keeper stays in goal.',
+          'Your assistant talks in a new way, and he knows the whole game. In your inbox he writes as one of you, the news is neutral like an agency, and the fans say we.',
+          'The transfer market opens mixed, with players from all over the world, and you can sort by age. Lists don’t show a rating any more, the verdict is in your scout’s report.',
+          'New game: the preview of your squad and the sponsor window are new.',
+          'Read messages are a lot brighter, no text is smaller than size 11, and long texts on Android don’t shrink until you can’t read them.',
+          'The computer clubs find their young talents faster.',
+          'The long dash is gone from all texts. I read all the German myself, and the short fan chants were checked line by line.',
+        ],
+        repariert: [
+          'The home friendly knows your new league after promotion or relegation.',
+          'Contract extensions at the end of the season work with the turnover of the new season.',
+        ],
+      },
+      hr: {
+        neu: [
+          'Individualni rad: pod Momčad, Trening dodirneš igrača i daš mu vlastiti cilj, jednu vrijednost ili novu poziciju. Zlatne strelice uz njegove vrijednosti pokazuju što trening upravo podiže i koliko brzo, a dodir na vrijednost premješta dodatni trening tamo.',
+          'Prekvalifikacija ima četiri stupnja: izvan pozicije, privikava se, solidno, prirodna pozicija. Kad napreduje za stupanj, piše ti pomoćni trener, s gumbom ravno na trening.',
+          'Naglasci treninga prikazuju vježbu kao sliku, ukupno dvanaest crteža.',
+          'Pojačanjima treba vremena: druga, bijela traka pokazuje koliko se novi igrač već uklopio. Iz vlastite zemlje to traje oko osam tjedana, iz inozemstva oko pola godine.',
+          'Njegovi zahtjevi: svaki igrač kaže koju ulogu, koliko dug ugovor i kakvu plaću želi. Sa skautom to piše na njegovoj kartici, bez skauta znaš samo otprilike ili saznaš tek iz njegova odgovora.',
+          'U ugovoru sam postavljaš ulogu, trajanje i plaću i pregovaraš. Ispod ponude ne piše je li dobra, to pokaže tek njegov odgovor, s razlogom. Isto vrijedi i kod produljenja ugovora.',
+          'Mladi želi igrati, stariji želi sigurnost, a dobar igrač želi novac i ulogu koja mu odgovara. Ako mu liga ili klub ne odgovaraju, nije zainteresiran. Prekršiš li obećanje o ulozi, prvo ti piše u poštu, a onda želi otići. Klubovi koje vodi računalo pregovaraju isto tako.',
+          'Slobodni igrači traže plaću prema onome što se o njima zna, a ne prema stvarnoj kvaliteti. Potpis naslijepo može poći po zlu, skaut ti to kaže unaprijed.',
+          'Klupski liječnik i voditelj akademije su osobe, s plaćom i karakterom. Biraš ih između kandidata, a kad ih neki drugi klub želi, dobiješ pismo.',
+          'Skauting na karti Europe: blizu je ono što graniči s tvojom zemljom. Plusom i minusom približavaš i udaljavaš.',
+          'Uprava zadaje cilj sezone s natjecanjem i plasmanom. Financijskog cilja više nema, a sva pisma uprave napisana su iznova.',
+          'Utakmicu uživo prati komentator: deset vrsta golova, od preokreta do gola časti, uz to kartoni i izmjene kao rečenica i poluvrijeme kao redak. Nakon simulacije dolazi kratki osvrt.',
+          'Tko jednu sezonu bude među najboljima u svojoj ligi, njegov raspon potencijala na prijelazu sezone ide gore, kod mladih više nego kod starijih. Svjetska klasa i dalje ostaje rijetka.',
+          'Postavke su četvrti redak na dnu glavnog izbornika, s jezikom, zvukom i spremanjem u oblak.',
+        ],
+        besser: [
+          'Dani prolaze brže. Prelazak u novu sezonu traje upola kraće, a i prvi dan prijelaznog roka je brži.',
+          'Svijet nastaje brže kad pokreneš novu igru, a početni svijet je isti kao prije.',
+          'Postava na pravom terenu: svatko na slici stoji ondje gdje igra. Ako prije utakmice ispadne standardni igrač, zamjena stoji na njegovu mjestu i igra njegovu poziciju, a rezervni vratar ostaje na golu.',
+          'Pomoćni trener govori na novi način i poznaje cijelu igru. U pošti piše kao jedan od vas, vijesti su neutralne kao agencija, a navijači govore mi.',
+          'Tržište se otvara mješovito, s igračima iz cijelog svijeta, a možeš sortirati i po dobi. Na popisima više nema procjene, sud stoji u izvještaju tvojeg skauta.',
+          'Nova igra: pregled momčadi i prozor sa sponzorom su novi.',
+          'Pročitane poruke su puno svjetlije, nijedno slovo nije manje od veličine 11, a dugi tekstovi na Androidu više se ne smanjuju dok ih ne možeš pročitati.',
+          'Klubovi koje vodi računalo brže pronalaze svoje talente.',
+          'Duga crta nestala je iz svih tekstova. Cijeli njemački sam pročitao, a kratki navijački povici pregledani su rečenicu po rečenicu.',
+        ],
+        repariert: [
+          'Domaća prijateljska utakmica nakon ulaska ili ispadanja zna tvoju novu ligu.',
+          'Produljenja ugovora na prijelazu sezone računaju s prihodom nove sezone.',
+        ],
+      },
+    },
+  },
   // 1.8 „Die Welt erzählt“ (Regel 55): Stoff Nikola 01.–03.11.2026 (Gedächtnis stoff-1-8, Mappe v1.8), Text Luka 04.11.2026; Quelle docs/announcements/v1.8/tagebuch-1-8.mjs.
   {
     version: '1.8', slug: '1-8',

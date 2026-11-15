@@ -86,7 +86,7 @@ function eintragHtml(e, s, eigeneSeite) {
 <section><div class="k">${esc(t.blick)}</div><ul class="blick" style="margin-top:8px">${blick}</ul></section>
 ${zahlen ? `<section><div class="k">${esc(t.zahlen)}</div><div class="zahlen" data-gruppe>${zahlen}</div></section>` : ''}
 ${e.hindernis ? `<section class="hindernis"><div class="k">${esc(t.hindernis)}</div><h3>${esc(e.hindernis.titel[s])}</h3><p>${esc(e.hindernis.text[s])}</p></section>` : ''}
-${e.ausblick ? `<section class="ausblick"><h3>${esc(e.ausblick.titel[s])}</h3>${e.ausblick.text[s].map((x) => `<p>${esc(x)}</p>`).join('')}<div class="galerie">${e.ausblick.bilder.map((n, i) => `<img src="/img/devlog/1-8/${s}-${n}.webp" width="1080" height="1350" loading="lazy" alt="${esc(e.ausblick.alt[s][i])}">`).join('')}</div></section>` : ''}
+${e.ausblick ? `<section class="ausblick"><h3>${esc(e.ausblick.titel[s])}</h3>${e.ausblick.text[s].map((x) => `<p>${esc(x)}</p>`).join('')}${e.ausblick.bilder ? `<div class="galerie">${e.ausblick.bilder.map((n, i) => `<img src="/img/devlog/${e.slug}/${s}-${n}.webp" width="1080" height="1350" loading="lazy" alt="${esc(e.ausblick.alt[s][i])}">`).join('')}</div>` : ''}</section>` : ''}
 <details><summary>${esc(t.alle)} ${esc(e.version)}</summary>${gruppe(t.neu, a.neu)}${gruppe(t.besser, a.besser)}${gruppe(t.repariert, a.repariert)}</details>
 ${fuss}
 </div></article>`;
